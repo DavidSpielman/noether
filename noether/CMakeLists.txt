@@ -43,6 +43,7 @@ catkin_package(
   INCLUDE_DIRS
     include
   LIBRARIES
+    mesh_segmenter
   CATKIN_DEPENDS
     actionlib
     mesh_segmenter
@@ -84,12 +85,16 @@ target_link_libraries(segmentation_server
   ${catkin_LIBRARIES}
   ${VTK_LIBRARIES}
 )
+#There needs to be a better pathing to the library
 add_executable(convex_hull_node
-              src/convex_hull_node.cpp)
+              src/convex_hull_node.cpp
+              ../mesh_segmenter/src/convex_hull.cpp
+)
 
-target_link_libraries(convex_hull_node   
+target_link_libraries(convex_hull_node  
   ${catkin_LIBRARIES}
-  ${VTK_LIBRARIES})
+  ${VTK_LIBRARIES}
+)
 
 if(noether_filtering_FOUND)
   add_executable(mesh_filter_server
