@@ -123,7 +123,9 @@ target_link_libraries(halfedge_boundary_finder_server
 #############
 ## Install ##
 #############
-install(TARGETS segmentation_server surface_raster_planner_application surface_raster_planner_server convex_hull_node
+install(TARGETS segmentation_server surface_raster_planner_application 
+  surface_raster_planner_server edge_generator_server
+  halfedge_boundary_finder_server convex_hull_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -142,6 +144,6 @@ install(DIRECTORY include/${PROJECT_NAME}/
   PATTERN ".svn" EXCLUDE
 )
 
-install(DIRECTORY config
+install(DIRECTORY config launch
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
