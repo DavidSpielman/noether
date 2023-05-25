@@ -10,6 +10,8 @@ FixedOriginGenerator::FixedOriginGenerator(const Eigen::Vector3d& origin) : orig
 
 Eigen::Vector3d FixedOriginGenerator::generate(const pcl::PolygonMesh& mesh) const { return origin_; }
 
+CentroidOriginGenerator::CentroidOriginGenerator(const Eigen::Vector3d& offset) : offset_(offset) {}
+
 Eigen::Vector3d CentroidOriginGenerator::generate(const pcl::PolygonMesh& mesh) const
 {
   pcl::PointCloud<pcl::PointXYZ> vertices;
@@ -18,8 +20,13 @@ Eigen::Vector3d CentroidOriginGenerator::generate(const pcl::PolygonMesh& mesh) 
   if (pcl::computeCentroid(vertices, centroid) < 1)
     throw std::runtime_error("Failed to compute mesh centroid");
 
-  return centroid.getArray3fMap().matrix().cast<double>();
+  return centroid.getArray3fMap().matrix().cast<double>() + offset_;
 }
+
+//AABBCenterOriginGenerator::AABBCenterOriginGenerator(const Eigen::Vector3d& offset) : offset_(offset) {}
+
+//Eigen::Vector3d AABBCenterOriginGenerator::generate(const pcl::PolygonMesh& mesh) const { return offset_; }
+AABBCenterOriginGenerator::AABBCenterOriginGenerator(const Eigen::Vector3d& offset) : offset_(offset) {}
 
 Eigen::Vector3d AABBCenterOriginGenerator::generate(const pcl::PolygonMesh& mesh) const
 {
@@ -28,7 +35,7 @@ Eigen::Vector3d AABBCenterOriginGenerator::generate(const pcl::PolygonMesh& mesh
   pcl::PointXYZ min, max;
   pcl::getMinMax3D(vertices, min, max);
   Eigen::Vector3d range = (max.getArray3fMap() - min.getArray3fMap()).matrix().cast<double>();
-  return range / 2.0;
+  return range / 2.0 + offset_;
 }
 
 OffsetOriginGenerator::OffsetOriginGenerator(std::unique_ptr<const OriginGenerator>&& generator,

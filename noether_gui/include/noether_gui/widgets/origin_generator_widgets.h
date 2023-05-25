@@ -30,18 +30,31 @@ struct CentroidOriginGeneratorWidget : public OriginGeneratorWidget
 {
   Q_OBJECT
 public:
-  using BaseWidget::BaseWidget;
+  CentroidOriginGeneratorWidget(QWidget* parent = nullptr);
 
   OriginGenerator::ConstPtr create() const override;
+
+  void configure(const YAML::Node&) override;
+  void save(YAML::Node&) const override;
+
+private:
+  Ui::Vector3dEditor* ui_;
 };
 
 struct AABBOriginGeneratorWidget : public OriginGeneratorWidget
 {
   Q_OBJECT
 public:
-  using BaseWidget::BaseWidget;
+  AABBOriginGeneratorWidget(QWidget* parent = nullptr);
 
   OriginGenerator::ConstPtr create() const override;
-};
+
+  void configure(const YAML::Node&) override;
+  void save(YAML::Node&) const override;
+
+  private:
+  Ui::Vector3dEditor* ui_;
+  };
+
 
 }  // namespace noether

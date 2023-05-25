@@ -25,7 +25,12 @@ private:
  */
 struct CentroidOriginGenerator : public OriginGenerator
 {
+public:
+  CentroidOriginGenerator(const Eigen::Vector3d& offset = Eigen::Vector3d::Zero());
   Eigen::Vector3d generate(const pcl::PolygonMesh& mesh) const override final;
+
+private:
+  const Eigen::Vector3d offset_;
 };
 
 /**
@@ -33,7 +38,13 @@ struct CentroidOriginGenerator : public OriginGenerator
  */
 struct AABBCenterOriginGenerator : public OriginGenerator
 {
+public:
+  AABBCenterOriginGenerator(const Eigen::Vector3d& offset = Eigen::Vector3d::Zero());
   Eigen::Vector3d generate(const pcl::PolygonMesh& mesh) const override final;
+
+private:
+  const Eigen::Vector3d offset_;
+
 };
 
 /**

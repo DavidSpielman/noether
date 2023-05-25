@@ -34,15 +34,60 @@ OriginGenerator::ConstPtr FixedOriginGeneratorWidget::create() const
       ui_->double_spin_box_x->value(), ui_->double_spin_box_y->value(), ui_->double_spin_box_z->value());
   return std::make_unique<FixedOriginGenerator>(origin);
 }
+CentroidOriginGeneratorWidget::CentroidOriginGeneratorWidget(QWidget* parent)
+  : OriginGeneratorWidget(parent), ui_(new Ui::Vector3dEditor())
+{
+  ui_->setupUi(this);
+  ui_->group_box->setTitle("Offset");
+}
+
+void CentroidOriginGeneratorWidget::configure(const YAML::Node& config)
+{
+  ui_->double_spin_box_x->setValue(getEntry<double>(config, "x"));
+  ui_->double_spin_box_y->setValue(getEntry<double>(config, "y"));
+  ui_->double_spin_box_z->setValue(getEntry<double>(config, "z"));
+}
+
+void CentroidOriginGeneratorWidget::save(YAML::Node& config) const
+{
+  config["x"] = ui_->double_spin_box_x->value();
+  config["y"] = ui_->double_spin_box_y->value();
+  config["z"] = ui_->double_spin_box_z->value();
+}
+
 
 OriginGenerator::ConstPtr CentroidOriginGeneratorWidget::create() const
 {
-  return std::make_unique<CentroidOriginGenerator>();
+  Eigen::Vector3d offset(
+      ui_->double_spin_box_x->value(), ui_->double_spin_box_y->value(), ui_->double_spin_box_z->value());
+  return std::make_unique<CentroidOriginGenerator>(offset);
+}
+
+AABBOriginGeneratorWidget::AABBOriginGeneratorWidget(QWidget* parent)
+  : OriginGeneratorWidget(parent), ui_(new Ui::Vector3dEditor())
+{
+  ui_->setupUi(this);
+  ui_->group_box->setTitle("Offset");
+}
+
+void AABBOriginGeneratorWidget::configure(const YAML::Node& config)
+{
+  ui_->double_spin_box_x->setValue(getEntry<double>(config, "x"));
+  ui_->double_spin_box_y->setValue(getEntry<double>(config, "y"));
+  ui_->double_spin_box_z->setValue(getEntry<double>(config, "z"));
+}
+
+void AABBOriginGeneratorWidget::save(YAML::Node& config) const
+{
+  config["x"] = ui_->double_spin_box_x->value();
+  config["y"] = ui_->double_spin_box_y->value();
+  config["z"] = ui_->double_spin_box_z->value();
 }
 
 OriginGenerator::ConstPtr AABBOriginGeneratorWidget::create() const
 {
-  return std::make_unique<AABBCenterOriginGenerator>();
+    Eigen::Vector3d offset(
+        ui_->double_spin_box_x->value(), ui_->double_spin_box_y->value(), ui_->double_spin_box_z->value());
+    return std::make_unique<AABBCenterOriginGenerator>(offset);
 }
-
 }  // namespace noether
