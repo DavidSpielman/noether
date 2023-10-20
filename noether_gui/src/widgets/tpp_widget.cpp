@@ -293,24 +293,53 @@ void TPPWidget::onPlan(const bool /*checked*/)
       throw std::runtime_error("No mesh file selected");
 
     // Load the mesh
-    pcl::PolygonMesh mesh;
-    if (pcl::io::loadPolygonFile(mesh_file, mesh) < 1)
+    pcl::PolygonMesh full_mesh;
+    if (pcl::io::loadPolygonFile(mesh_file, full_mesh) < 1)
       throw std::runtime_error("Failed to load mesh from file");
 
     const ToolPathPlannerPipeline pipeline = pipeline_widget_->createPipeline();
     QApplication::setOverrideCursor(Qt::WaitCursor);
 
     // Run the mesh modifier
-    std::vector<pcl::PolygonMesh> meshes = pipeline.mesh_modifier->modify(mesh);
+    std::vector<pcl::PolygonMesh> meshes = pipeline.mesh_modifier->modify(full_mesh);
 
     tool_paths_.clear();
     tool_paths_.reserve(meshes.size());
 
     pcl::PolygonMesh combined_mesh_fragments;
     std::vector<ToolPaths> unmodified_tool_paths;
-    for (const pcl::PolygonMesh& mesh : meshes)
+    std::string file_name = "/tmp/comb_frag_mesh_test";
+//    for (const pcl::PolygonMesh& mesh : meshes)
+    for(std::size_t i = 0; i < meshes.size(); ++i)
     {
-      combined_mesh_fragments += mesh;
+      const pcl::PolygonMesh& mesh = meshes[i];
+      if (i == 0)
+        combined_mesh_fragments = mesh;
+      else
+        pcl::PolygonMesh::concatenate(combined_mesh_fragments, mesh);
+
+
+
+//      pcl::PolygonMesh tmp;
+////      pcl::concatenate(combined_mesh_fragments, mesh, combined_mesh_fragments);
+//      if (i==0) {
+//        tmp = mesh;
+//      }
+//      pcl::concatenate(combined_mesh_fragments, mesh, tmp);
+//      combined_mesh_fragments = tmp;
+//      if (pcl::concatenate(combined_mesh_fragments, mesh, tmp) == true) {
+//        std::cout << "Concatenation works \n";
+//      }
+//      else {
+//        std::cout << "Concatenation Failed";
+//      }
+
+
+//      combined_mesh_fragments += mesh;
+//      pcl::PolygonMesh::concatenate(combined_mesh_fragments, mesh);
+
+      pcl::io::savePolygonFilePLY(file_name + std::to_string(i) + ".ply", combined_mesh_fragments);
+
 
       // Plan the tool path
       ToolPaths path = pipeline.planner->plan(mesh);
@@ -325,6 +354,8 @@ void TPPWidget::onPlan(const bool /*checked*/)
     {
       pcl::VTKUtils::mesh2vtk(combined_mesh_fragments, combined_mesh_fragments_);
       mesh_fragment_mapper_->Update();
+      mesh_fragment_mapper_->SetInputData(combined_mesh_fragments_);
+
     }
 
     // Render the unmodified tool paths
