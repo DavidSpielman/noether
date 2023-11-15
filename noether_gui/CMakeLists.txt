@@ -10,6 +10,7 @@ find_package(Eigen3 REQUIRED)
 find_package(Boost REQUIRED COMPONENTS program_options)
 find_package(boost_plugin_loader REQUIRED)
 find_package(noether_tpp REQUIRED)
+find_package(noether_filtering REQUIRED)
 find_package(PCL REQUIRED COMPONENTS io surface)
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
 find_package(yaml-cpp REQUIRED)
@@ -42,7 +43,9 @@ qt5_wrap_cpp(${PROJECT_NAME}_widget_mocs
   include/${PROJECT_NAME}/widgets/tool_path_modifiers/snake_organization_modifier_widget.h
   include/${PROJECT_NAME}/widgets/tool_path_modifiers/standard_edge_paths_organization_modifier_widget.h
   include/${PROJECT_NAME}/widgets/tool_path_modifiers/tool_drag_orientation_modifier_widget.h
-  include/${PROJECT_NAME}/widgets/tool_path_modifiers/uniform_orientation_modifier_widget.h)
+  include/${PROJECT_NAME}/widgets/tool_path_modifiers/uniform_orientation_modifier_widget.h
+  # Mesh Modifiers
+  include/${PROJECT_NAME}/widgets/mesh_modifiers/mesh_splitter_widget.h)
 
 qt5_wrap_ui(${PROJECT_NAME}_widget_ui_mocs
   ui/vector3d_editor_widget.ui
@@ -84,13 +87,15 @@ add_library(${PROJECT_NAME} SHARED
   src/widgets/tool_path_modifiers/standard_edge_paths_organization_modifier_widget.cpp
   src/widgets/tool_path_modifiers/tool_drag_orientation_modifier_widget.cpp
   src/widgets/tool_path_modifiers/uniform_orientation_modifier_widget.cpp
+  # Mesh Modifiers
+  src/widgets/mesh_modifiers/mesh_splitter_widget.cpp
   ${${PROJECT_NAME}_widget_mocs}
   ${${PROJECT_NAME}_widget_ui_mocs}
 )
 target_include_directories(${PROJECT_NAME} PUBLIC
   "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
   "$<INSTALL_INTERFACE:include>")
-target_link_libraries(${PROJECT_NAME} PUBLIC noether::noether_tpp Qt5::Widgets ${PCL_LIBRARIES} boost_plugin_loader::boost_plugin_loader Eigen3::Eigen yaml-cpp)
+target_link_libraries(${PROJECT_NAME} PUBLIC noether::noether_tpp noether::noether_filtering Qt5::Widgets ${PCL_LIBRARIES} boost_plugin_loader::boost_plugin_loader Eigen3::Eigen yaml-cpp)
 target_compile_definitions(${PROJECT_NAME}
   PUBLIC
     NOETHER_GUI_PLUGINS="${PROJECT_NAME}_plugins"

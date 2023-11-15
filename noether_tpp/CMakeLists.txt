@@ -8,6 +8,7 @@ project(${pkg_extracted_name} VERSION ${pkg_extracted_version} LANGUAGES CXX)
 
 find_package(Eigen3 REQUIRED)
 find_package(PCL REQUIRED COMPONENTS common io)
+find_package(noether_filtering REQUIRED)
 
 find_package(VTK REQUIRED NO_MODULE)
 if(VTK_FOUND AND ("${VTK_VERSION}" VERSION_LESS 7.1))
@@ -31,6 +32,7 @@ add_library(${PROJECT_NAME} SHARED
   src/utils.cpp
   # Mesh Modifiers
   src/mesh_modifiers/compound_modifier.cpp
+  src/mesh_modifiers/mesh_splitter.cpp
   # Tool Path Modifiers
   src/tool_path_modifiers/circular_lead_in_modifier.cpp
   src/tool_path_modifiers/circular_lead_out_modifier.cpp
@@ -58,7 +60,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
   "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
   "$<INSTALL_INTERFACE:include>")
 target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${PCL_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen ${PCL_LIBRARIES} ${VTK_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen ${PCL_LIBRARIES} ${VTK_LIBRARIES} noether::noether_filtering)
 target_cxx_version(${PROJECT_NAME} PUBLIC VERSION 14)
 target_clang_tidy(${PROJECT_NAME}
   ENABLE ${NOETHER_ENABLE_CLANG_TIDY}

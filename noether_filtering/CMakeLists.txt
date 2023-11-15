@@ -21,8 +21,8 @@ find_package(xmlrpcpp REQUIRED)
 ###########
 
 add_library(${PROJECT_NAME} SHARED
-  src/filter_group.cpp
-  src/filter_manager.cpp
+#  src/filter_group.cpp
+#  src/filter_manager.cpp
   src/subset_extraction/subset_extractor.cpp
   src/subset_extraction/extruded_polygon_subset_extractor.cpp
 )
@@ -43,6 +43,30 @@ target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC
 )
 target_cxx_version(${PROJECT_NAME} PUBLIC VERSION 14)
 set_target_properties(${PROJECT_NAME} PROPERTIES NO_SYSTEM_FROM_IMPORTED 1)
+
+add_library(${PROJECT_NAME}_filter SHARED
+  src/filter_group.cpp
+  src/filter_manager.cpp
+#  src/subset_extraction/subset_extractor.cpp
+#  src/subset_extraction/extruded_polygon_subset_extractor.cpp
+)
+target_link_libraries(${PROJECT_NAME}_filter PUBLIC
+  ${Boost_LIBRARIES}
+  ${pluginlib_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${xmlrpcpp_LIBRARIES}
+)
+target_include_directories(${PROJECT_NAME}_filter PUBLIC
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+    "$<INSTALL_INTERFACE:include>")
+target_include_directories(${PROJECT_NAME}_filter SYSTEM PUBLIC
+  ${Boost_INCLUDE_DIRS}
+  ${pluginlib_INCLUDE_DIRS}
+  ${PCL_INCLUDE_DIRS}
+  ${xmlrpcpp_INCLUDE_DIRS}
+)
+target_cxx_version(${PROJECT_NAME}_filter PUBLIC VERSION 14)
+set_target_properties(${PROJECT_NAME}_filter PROPERTIES NO_SYSTEM_FROM_IMPORTED 1)
 
 if(${BUILD_MESH_PLUGINS})
   # Mesh Filters library
@@ -116,9 +140,9 @@ set_target_properties(${PROJECT_NAME}_cloud_filter_plugins PROPERTIES NO_SYSTEM_
 ## Install ##
 #############
 if(${BUILD_MESH_PLUGINS})
-  list(APPEND PACKAGE_LIBRARIES ${PROJECT_NAME} ${PROJECT_NAME}_mesh_filters ${PROJECT_NAME}_mesh_filter_plugins ${PROJECT_NAME}_cloud_filters ${PROJECT_NAME}_cloud_filter_plugins)
+  list(APPEND PACKAGE_LIBRARIES ${PROJECT_NAME} ${PROJECT_NAME}_filter ${PROJECT_NAME}_mesh_filters ${PROJECT_NAME}_mesh_filter_plugins ${PROJECT_NAME}_cloud_filters ${PROJECT_NAME}_cloud_filter_plugins)
 else()
-  list(APPEND PACKAGE_LIBRARIES ${PROJECT_NAME} ${PROJECT_NAME}_cloud_filters ${PROJECT_NAME}_cloud_filter_plugins)
+  list(APPEND PACKAGE_LIBRARIES ${PROJECT_NAME} ${PROJECT_NAME}_filter ${PROJECT_NAME}_cloud_filters ${PROJECT_NAME}_cloud_filter_plugins)
 endif()
 
 # Install headers

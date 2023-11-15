@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QWidget>
+#include <yaml.h>
 
 namespace YAML
 {

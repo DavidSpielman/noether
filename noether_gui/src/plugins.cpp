@@ -22,6 +22,8 @@
 #include <noether_gui/widgets/tool_path_modifiers/standard_edge_paths_organization_modifier_widget.h>
 #include <noether_gui/widgets/tool_path_modifiers/tool_drag_orientation_modifier_widget.h>
 #include <noether_gui/widgets/tool_path_modifiers/uniform_orientation_modifier_widget.h>
+//  Mesh Modifiers
+#include <noether_gui/widgets/mesh_modifiers/mesh_splitter_widget.h>
 
 #include <QWidget>
 #include <QMessageBox>
@@ -87,6 +89,11 @@ using CircularLeadInToolPathModifierWidgetPlugin =
 using CircularLeadOutToolPathModifierWidgetPlugin =
     WidgetPluginImpl<CircularLeadOutToolPathModifierWidget, ToolPathModifierWidget>;
 
+//Mesh Modifiers
+using MeshSplitterModifierWidgetPlugin =
+    WidgetPluginImpl<MeshSplitterMeshModifierWidget, MeshModifierWidget>;
+
+
 // Raster Tool Path Planners
 struct PlaneSlicerRasterPlannerWidgetPlugin : ToolPathPlannerWidgetPlugin
 {
@@ -133,3 +140,4 @@ EXPORT_TOOL_PATH_MODIFIER_WIDGET_PLUGIN(noether::CircularLeadInToolPathModifierW
 EXPORT_TOOL_PATH_MODIFIER_WIDGET_PLUGIN(noether::CircularLeadOutToolPathModifierWidgetPlugin, CircularLeadOutModifier)
 
 EXPORT_TPP_WIDGET_PLUGIN(noether::PlaneSlicerRasterPlannerWidgetPlugin, PlaneSlicerRasterPlanner)
+EXPORT_MESH_MODIFIER_WIDGET_PLUGIN(noether::MeshSplitterModifierWidgetPlugin, MeshSplitterModifier)
