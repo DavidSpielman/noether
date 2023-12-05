@@ -50,36 +50,10 @@ FlatPlaneToolPathPlannerWidget::FlatPlaneToolPathPlannerWidget(QWidget* parent)
   // Create a horizontal layout for the spin box and label
   auto spinBoxLayout = new QHBoxLayout;
 
-  // // Plane x-dimension
-  // plane_x_dim_ = new QSpinBox(this);
-  // plane_x_dim_->setMinimum(0);
-  // plane_x_dim_->setSingleStep(1);
-  // plane_x_dim_->setValue(0);
-
-  // auto label_pnt = new QLabel("X-dimension of flat plane (m)", this);
-  // label_pnt->setToolTip("Length of rectangulat plane in meters that the scan trajectory will be run on");
-
-  // // Add label and spin box to the horizontal layout
-  // spinBoxLayout->addWidget(label_pnt);
-  // spinBoxLayout->addWidget(plane_x_dim_);
-
-  // // Plane y-dimension
-  // plane_y_dim_ = new QSpinBox(this);
-  // plane_y_dim_->setMinimum(0);
-  // plane_y_dim_->setSingleStep(1);
-  // plane_y_dim_->setValue(0);
-
-  // auto label_pnt_y = new QLabel("Y-dimension of flat plane (m)", this);
-  // label_pnt->setToolTip("Length of rectangulat plane in meters that the scan trajectory will be run on");
-
-  // // Add label and spin box to the horizontal layout
-  // spinBoxLayout->addWidget(label_pnt);
-  // spinBoxLayout->addWidget(plane_y_dim_);
-
   // Add the horizontal layout to the container layout
   containerLayout->addLayout(spinBoxLayout);
 
-  // Set the container widget as the layout for the Vector3dEditor widget
+  // Set the container widget as the layout for the Isometry3dEditor and Vector2dEditor widgets
   origin_ui_->group_box->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   containerLayout->addWidget(origin_ui_->group_box);
 

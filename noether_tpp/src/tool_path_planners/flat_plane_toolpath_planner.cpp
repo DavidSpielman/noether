@@ -19,15 +19,20 @@ ToolPaths FlatPlaneToolPathPlanner::plan(const pcl::PolygonMesh& /*mesh*/) const
   Eigen::Isometry3d eigen_pose = origin_;
   for(size_t i = 0; plane_dims_[0] - point_spacing_[0]*i >= 0; i++)
   {
-    for(size_t j = 0; plane_dims_[1] - point_spacing_[1]*i >= 0; j++)
+    for(size_t j = 0; plane_dims_[1] - point_spacing_[1]*j >= 0; j++)
     {
       Eigen::Isometry3d pt = eigen_pose * Eigen::AngleAxisd(y_rotation, Eigen::Vector3d::UnitY()) * Eigen::Translation3d(i*point_spacing_[0],j*point_spacing_[1], 0.0);
       segment.push_back(pt);
     }
-    if (i % 2 != 0)
+    if (i % 2 != 0) {
       std::reverse(segment.begin(), segment.end());
+      tool_path.push_back(segment);
+    }
+    else{
+      tool_path.push_back(segment);
+    }
+    segment.clear();
   }
-  tool_path.push_back(segment);
   tool_paths.push_back(tool_path);
   return tool_paths;
 }
