@@ -20,7 +20,6 @@
 
 #include <noether_tpp/core/tool_path_planner.h>
 #include <string.h>
-#include <geometry_msgs/msg/pose.h>
 
 namespace noether
 {
@@ -30,15 +29,13 @@ namespace noether
 class FlatPlaneToolPathPlanner : public ToolPathPlanner
 {
 public:
-  FlatPlaneToolPathPlanner(double plane_x_length, double plane_y_length, double z_offset, double spacing, geometry_msgs::msg::Pose reference_frame);
-  ToolPaths plan() const override final;
+  FlatPlaneToolPathPlanner(const Eigen::Vector2d& plane_dims, const Eigen::Vector2d& point_spacing,  Eigen::Isometry3d origin = Eigen::Isometry3d::Identity());
+  ToolPaths plan(const pcl::PolygonMesh& mesh) const override final;
 
 private:
-  double plane_x_length_;
-  double plane_y_length_;
-  double z_offset_;
-  double spacing_;
-  geometry_msgs::Pose reference_frame_;
+  const Eigen::Vector2d plane_dims_;
+  const Eigen::Vector2d point_spacing_;
+  const Eigen::Isometry3d origin_;
 };
 
 }  // namespace noether

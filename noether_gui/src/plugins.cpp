@@ -1,5 +1,6 @@
 #include <noether_gui/plugin_interface.h>
 // Tool path planners
+#include <noether_gui/widgets/tool_path_planners/flat_plane_toolpath_planner_widget.h>
 //   Raster
 #include <noether_gui/widgets/tool_path_planners/raster/raster_planner_widget.h>
 //   Direction Generators
@@ -45,6 +46,9 @@ struct WidgetPluginImpl : WidgetPlugin<BaseT>
     return widget;
   }
 };
+// Tool Path Planners
+using FlatPlaneToolPathPlannerWidgetPlugin =
+    WidgetPluginImpl<FlatPlaneToolPathPlannerWidget, ToolPathPlannerWidget>;
 
 // Direction Generators
 using FixedDirectionGeneratorWidgetPlugin =
@@ -139,5 +143,8 @@ EXPORT_TOOL_PATH_MODIFIER_WIDGET_PLUGIN(noether::ToolDragOrientationToolPathModi
 EXPORT_TOOL_PATH_MODIFIER_WIDGET_PLUGIN(noether::CircularLeadInToolPathModifierWidgetPlugin, CircularLeadInModifier)
 EXPORT_TOOL_PATH_MODIFIER_WIDGET_PLUGIN(noether::CircularLeadOutToolPathModifierWidgetPlugin, CircularLeadOutModifier)
 
+EXPORT_TOOL_PATH_PLANNER_WIDGET_PLUGIN(noether::FlatPlaneToolPathPlannerWidgetPlugin, FlatPlaneToolPathPlanner)
+
 EXPORT_TPP_WIDGET_PLUGIN(noether::PlaneSlicerRasterPlannerWidgetPlugin, PlaneSlicerRasterPlanner)
 EXPORT_MESH_MODIFIER_WIDGET_PLUGIN(noether::MeshSplitterModifierWidgetPlugin, MeshSplitterModifier)
+

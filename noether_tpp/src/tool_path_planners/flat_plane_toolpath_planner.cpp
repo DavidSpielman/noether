@@ -1,45 +1,34 @@
 #include <noether_tpp/core/tool_path_planner.h>
 #include <noether_tpp/tool_path_planners/flat_plane_toolpath_planner.h>
-#include <geometry_msgs/msg/pose.h>
+#include <math.h>
 
 namespace noether
 {
-FlatPlaneToolPathPlanner::FlatPlaneToolPathPlanner(double plane_x_length, double plane_y_length, double z_offset, double spacing, geometry_msgs::Pose reference_frame)
-  : plane_x_length_(plane_x_length), plane_y_length_(plane_y_length), z_offset_(z_offset), spacing_(spacing), reference_frame_(reference_frame)
+FlatPlaneToolPathPlanner::FlatPlaneToolPathPlanner(const Eigen::Vector2d& plane_dims, const Eigen::Vector2d& point_spacing,  Eigen::Isometry3d origin)
+  : plane_dims_(plane_dims), point_spacing_(point_spacing), origin_(origin)
 {
 }
 
-ToolPaths FlatPlaneToolPathPlanner::plan() const
+ToolPaths FlatPlaneToolPathPlanner::plan(const pcl::PolygonMesh& /*mesh*/) const
 {
-  // Convert geometry_msgs Pose to Eigen Isometry
-  Eigen::Isometry3d eigen_pose = Eigen::Isometry3d::Identity();
-
-  // Extract position from geometry_msgs Pose
-  Eigen::Vector3d translation(reference_frame_.position.x, reference_frame_.position.y, reference_frame_.position.z);
-  eigen_pose.translation() = translation;
-
-  // Extract orientation from geometry_msgs Pose
-  Eigen::Quaterniond quat(reference_frame_.orientation.w, reference_frame_.orientation.x,
-                          reference_frame_.orientation.y, reference_frame_.orientation.z);
-  eigen_pose.linear() = quat.toRotationMatrix();
-
   ToolPathSegment segment;
   ToolPath tool_path;
   ToolPaths tool_paths;
-  double y_rotation_angle = 180;
+  double y_rotation = 180*M_PI/180;
 
-  for(size_t i = 0; plane_x_length_ - spacing_*i >= 0; i++)
+  Eigen::Isometry3d eigen_pose = origin_;
+  for(size_t i = 0; plane_dims_[0] - point_spacing_[0]*i >= 0; i++)
   {
-    for(size_t j = 0; plane_y_length_ - spacing_*i >= 0; j++)
+    for(size_t j = 0; plane_dims_[1] - point_spacing_[1]*i >= 0; j++)
     {
-      Eigen::Isometry3d pt = eigen_pose * Eigen::AngleAxisd(y_rotation_angle, Eigen::Vector3d::UnitY()) * Eigen::Translation3d(i*spacing_,j*spacing_,z_offset_);
+      Eigen::Isometry3d pt = eigen_pose * Eigen::AngleAxisd(y_rotation, Eigen::Vector3d::UnitY()) * Eigen::Translation3d(i*point_spacing_[0],j*point_spacing_[1], 0.0);
       segment.push_back(pt);
     }
     if (i % 2 != 0)
       std::reverse(segment.begin(), segment.end());
   }
-  tool_path = tool_path.push_back(segment);
-  tool_paths = tool_paths.push_pack(tool_path);
+  tool_path.push_back(segment);
+  tool_paths.push_back(tool_path);
   return tool_paths;
 }
 }  // namespace noether
