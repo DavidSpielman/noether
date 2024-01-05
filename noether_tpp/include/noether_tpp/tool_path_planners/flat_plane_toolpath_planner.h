@@ -29,13 +29,13 @@ namespace noether
 class FlatPlaneToolPathPlanner : public ToolPathPlanner
 {
 public:
-  FlatPlaneToolPathPlanner(const Eigen::Vector2d& plane_dims, const Eigen::Vector2d& point_spacing,  Eigen::Isometry3d origin = Eigen::Isometry3d::Identity());
+  FlatPlaneToolPathPlanner(const Eigen::Vector2d& plane_dims, const Eigen::Vector2d& point_spacing,  Eigen::Isometry3d offset = Eigen::Isometry3d::Identity());
   ToolPaths plan(const pcl::PolygonMesh& mesh) const override final;
 
 private:
   const Eigen::Vector2d plane_dims_;
   const Eigen::Vector2d point_spacing_;
-  const Eigen::Isometry3d origin_;
+  const Eigen::Isometry3d offset_;
 };
 
 }  // namespace noether
