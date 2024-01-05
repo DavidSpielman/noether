@@ -29,7 +29,9 @@ namespace noether
 class FlatPlaneToolPathPlanner : public ToolPathPlanner
 {
 public:
-  FlatPlaneToolPathPlanner(const Eigen::Vector2d& plane_dims, const Eigen::Vector2d& point_spacing,  Eigen::Isometry3d offset = Eigen::Isometry3d::Identity());
+  FlatPlaneToolPathPlanner(const Eigen::Vector2d& plane_dims,
+                           const Eigen::Vector2d& point_spacing,
+                           Eigen::Isometry3d offset = Eigen::Isometry3d::Identity());
   ToolPaths plan(const pcl::PolygonMesh& mesh) const override final;
 
 private:

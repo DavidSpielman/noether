@@ -47,8 +47,7 @@ struct WidgetPluginImpl : WidgetPlugin<BaseT>
   }
 };
 // Tool Path Planners
-using FlatPlaneToolPathPlannerWidgetPlugin =
-    WidgetPluginImpl<FlatPlaneToolPathPlannerWidget, ToolPathPlannerWidget>;
+using FlatPlaneToolPathPlannerWidgetPlugin = WidgetPluginImpl<FlatPlaneToolPathPlannerWidget, ToolPathPlannerWidget>;
 
 // Direction Generators
 using FixedDirectionGeneratorWidgetPlugin =

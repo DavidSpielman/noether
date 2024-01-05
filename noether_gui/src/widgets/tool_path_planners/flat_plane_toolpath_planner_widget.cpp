@@ -8,7 +8,6 @@
 #include "ui_vector2d_editor_widget.h"
 #include "ui_isometry3d_editor_widget.h"
 
-
 static const std::string ORIGIN_PX_KEY = "px";
 static const std::string ORIGIN_PY_KEY = "py";
 static const std::string ORIGIN_PZ_KEY = "pz";
@@ -22,12 +21,13 @@ static const std::string PLANE_Y_DIM_KEY = "plane_y_dim";
 static const std::string X_SPACING_KEY = "x_spacing";
 static const std::string Y_SPACING_KEY = "y_spacing";
 
-
 namespace noether
 {
 FlatPlaneToolPathPlannerWidget::FlatPlaneToolPathPlannerWidget(QWidget* parent)
-  : ToolPathPlannerWidget(parent), origin_ui_(new Ui::Isometry3dEditor()),
-    plane_dim_ui_(new Ui::Vector2dEditor()), spacing_dim_ui_(new Ui::Vector2dEditor())
+  : ToolPathPlannerWidget(parent)
+  , origin_ui_(new Ui::Isometry3dEditor())
+  , plane_dim_ui_(new Ui::Vector2dEditor())
+  , spacing_dim_ui_(new Ui::Vector2dEditor())
 {
   // Create a vertical layout for the entire widget
   auto mainLayout = new QVBoxLayout(this);
@@ -74,21 +74,23 @@ ToolPathPlanner::ConstPtr FlatPlaneToolPathPlannerWidget::create() const
 {
   Eigen::Isometry3d origin = Eigen::Isometry3d::Identity();
   // Create a quaternion from roll, pitch, yaw
-  Eigen::Quaterniond q(origin_ui_->double_spin_box_qw->value(), origin_ui_->double_spin_box_qx->value(), origin_ui_->double_spin_box_qy->value(), origin_ui_->double_spin_box_qz->value());
+  Eigen::Quaterniond q(origin_ui_->double_spin_box_qw->value(),
+                       origin_ui_->double_spin_box_qx->value(),
+                       origin_ui_->double_spin_box_qy->value(),
+                       origin_ui_->double_spin_box_qz->value());
 
   // Set the translation
-  origin.translation() = Eigen::Vector3d(origin_ui_->double_spin_box_px->value(), origin_ui_->double_spin_box_py->value(), origin_ui_->double_spin_box_pz->value());
+  origin.translation() = Eigen::Vector3d(origin_ui_->double_spin_box_px->value(),
+                                         origin_ui_->double_spin_box_py->value(),
+                                         origin_ui_->double_spin_box_pz->value());
 
   // Set the rotation
   origin.rotate(q);
 
-  Eigen::Vector2d plane_dim (
-        plane_dim_ui_->double_spin_box_x->value(), plane_dim_ui_->double_spin_box_y->value());
-  Eigen::Vector2d spacing (
-        spacing_dim_ui_->double_spin_box_x->value(), spacing_dim_ui_->double_spin_box_y->value());
+  Eigen::Vector2d plane_dim(plane_dim_ui_->double_spin_box_x->value(), plane_dim_ui_->double_spin_box_y->value());
+  Eigen::Vector2d spacing(spacing_dim_ui_->double_spin_box_x->value(), spacing_dim_ui_->double_spin_box_y->value());
   return std::make_unique<FlatPlaneToolPathPlanner>(plane_dim, spacing, origin);
 }
-
 
 void FlatPlaneToolPathPlannerWidget::configure(const YAML::Node& config)
 {
@@ -124,7 +126,6 @@ void FlatPlaneToolPathPlannerWidget::save(YAML::Node& config) const
 
   config[X_SPACING_KEY] = spacing_dim_ui_->double_spin_box_x->value();
   config[Y_SPACING_KEY] = spacing_dim_ui_->double_spin_box_y->value();
-
 }
 
 }  // namespace noether
