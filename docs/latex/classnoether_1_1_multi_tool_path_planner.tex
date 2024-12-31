@@ -1,0 +1,66 @@
+\hypertarget{classnoether_1_1_multi_tool_path_planner}{}\doxysection{noether\+::Multi\+Tool\+Path\+Planner Class Reference}
+\label{classnoether_1_1_multi_tool_path_planner}\index{noether::MultiToolPathPlanner@{noether::MultiToolPathPlanner}}
+
+
+Runs multiple tool path planners serially and concatenates their outputs together.  
+
+
+
+
+{\ttfamily \#include $<$multi\+\_\+tool\+\_\+path\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Multi\+Tool\+Path\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classnoether_1_1_multi_tool_path_planner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Multi\+Tool\+Path\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classnoether_1_1_multi_tool_path_planner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_multi_tool_path_planner_a587b4c35a7a31c5d6e0d0ff92bb9d496}\label{classnoether_1_1_multi_tool_path_planner_a587b4c35a7a31c5d6e0d0ff92bb9d496}} 
+{\bfseries Multi\+Tool\+Path\+Planner} (\mbox{\hyperlink{classnoether_1_1_multi_tool_path_planner}{Multi\+Tool\+Path\+Planner}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classnoether_1_1_multi_tool_path_planner_af4bd73ee1591ec7a4cbec3b4f99e7e91}\label{classnoether_1_1_multi_tool_path_planner_af4bd73ee1591ec7a4cbec3b4f99e7e91}} 
+{\bfseries Multi\+Tool\+Path\+Planner} (const \mbox{\hyperlink{classnoether_1_1_multi_tool_path_planner}{Multi\+Tool\+Path\+Planner}} \&)=delete
+\item 
+\mbox{\Hypertarget{classnoether_1_1_multi_tool_path_planner_ab4ca72030384ad284b26b9d24d319dd9}\label{classnoether_1_1_multi_tool_path_planner_ab4ca72030384ad284b26b9d24d319dd9}} 
+\mbox{\hyperlink{classnoether_1_1_multi_tool_path_planner}{Multi\+Tool\+Path\+Planner}} \& {\bfseries operator=} (const \mbox{\hyperlink{classnoether_1_1_multi_tool_path_planner}{Multi\+Tool\+Path\+Planner}} \&)=delete
+\item 
+\mbox{\Hypertarget{classnoether_1_1_multi_tool_path_planner_ae7cabb5cfc9326f4f156d9da8d9705c3}\label{classnoether_1_1_multi_tool_path_planner_ae7cabb5cfc9326f4f156d9da8d9705c3}} 
+\mbox{\hyperlink{classnoether_1_1_multi_tool_path_planner}{Multi\+Tool\+Path\+Planner}} \& {\bfseries operator=} (\mbox{\hyperlink{classnoether_1_1_multi_tool_path_planner}{Multi\+Tool\+Path\+Planner}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classnoether_1_1_multi_tool_path_planner_af29927e976b1d5692f756efd544cd55d}\label{classnoether_1_1_multi_tool_path_planner_af29927e976b1d5692f756efd544cd55d}} 
+{\bfseries Multi\+Tool\+Path\+Planner} (std\+::vector$<$ Tool\+Path\+Planner\+::\+Const\+Ptr $>$ \&\&planners)
+\item 
+\mbox{\Hypertarget{classnoether_1_1_multi_tool_path_planner_a59922aad153d930f21b4db73093b4210}\label{classnoether_1_1_multi_tool_path_planner_a59922aad153d930f21b4db73093b4210}} 
+\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} {\bfseries plan} (const pcl\+::\+Polygon\+Mesh \&mesh) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_multi_tool_path_planner_ac40e00ef40f06c59a9c7dc77b3a52e31}\label{classnoether_1_1_multi_tool_path_planner_ac40e00ef40f06c59a9c7dc77b3a52e31}} 
+const std\+::vector$<$ Tool\+Path\+Planner\+::\+Const\+Ptr $>$ {\bfseries planners\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Runs multiple tool path planners serially and concatenates their outputs together. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/include/noether\+\_\+tpp/tool\+\_\+path\+\_\+planners/multi\+\_\+tool\+\_\+path\+\_\+planner.\+h\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/src/tool\+\_\+path\+\_\+planners/multi\+\_\+tool\+\_\+path\+\_\+planner.\+cpp\end{DoxyCompactItemize}

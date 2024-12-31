@@ -1,0 +1,85 @@
+\hypertarget{structnoether_1_1ExtrudedPolygonSubsetExtractor}{}\doxysection{noether\+::Extruded\+Polygon\+Subset\+Extractor Struct Reference}
+\label{structnoether_1_1ExtrudedPolygonSubsetExtractor}\index{noether::ExtrudedPolygonSubsetExtractor@{noether::ExtrudedPolygonSubsetExtractor}}
+
+
+Extracts the submesh with the vertices captured inside an extruded polygon defined by the input boundary points.  
+
+
+
+
+{\ttfamily \#include $<$extruded\+\_\+polygon\+\_\+subset\+\_\+extractor.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Extruded\+Polygon\+Subset\+Extractor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{structnoether_1_1ExtrudedPolygonSubsetExtractor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Extruded\+Polygon\+Subset\+Extractor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structnoether_1_1ExtrudedPolygonSubsetExtractor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnoether_1_1ExtrudedPolygonSubsetExtractor_1_1Params}{Params}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{structnoether_1_1ExtrudedPolygonSubsetExtractor_a43adec9c418039e189976b3ab2ae2251}{extract}} (const pcl\+::\+P\+C\+L\+Point\+Cloud2 \&cloud, const Eigen\+::\+Matrix\+X3d \&boundary) const override
+\begin{DoxyCompactList}\small\item\em Extracts the inlying subset of points from a cloud given a set of boundary points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1ExtrudedPolygonSubsetExtractor_a7730ae32b85985f732bcd6edeb2bd9e4}\label{structnoether_1_1ExtrudedPolygonSubsetExtractor_a7730ae32b85985f732bcd6edeb2bd9e4}} 
+\mbox{\hyperlink{structnoether_1_1ExtrudedPolygonSubsetExtractor_1_1Params}{Params}} {\bfseries params}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extracts the submesh with the vertices captured inside an extruded polygon defined by the input boundary points. 
+
+Operations
+\begin{DoxyItemize}
+\item Fit plane to boundary points
+\item Project boundary points onto fitted plane
+\item Extrude a prism defined by the projected boundary to the extents of the mesh in the direction of the fitted plane normal
+\item Identify the vertices within the extruded prism
+\item Cluster the inlier vertices
+\item Extract the single cluster of vertices whose centroid is closest to the centroid of the boundary 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnoether_1_1ExtrudedPolygonSubsetExtractor_a43adec9c418039e189976b3ab2ae2251}\label{structnoether_1_1ExtrudedPolygonSubsetExtractor_a43adec9c418039e189976b3ab2ae2251}} 
+\index{noether::ExtrudedPolygonSubsetExtractor@{noether::ExtrudedPolygonSubsetExtractor}!extract@{extract}}
+\index{extract@{extract}!noether::ExtrudedPolygonSubsetExtractor@{noether::ExtrudedPolygonSubsetExtractor}}
+\doxysubsubsection{\texorpdfstring{extract()}{extract()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ noether\+::\+Extruded\+Polygon\+Subset\+Extractor\+::extract (\begin{DoxyParamCaption}\item[{const pcl\+::\+P\+C\+L\+Point\+Cloud2 \&}]{cloud,  }\item[{const Eigen\+::\+Matrix\+X3d \&}]{boundary }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Extracts the inlying subset of points from a cloud given a set of boundary points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cloud} & \\
+\hline
+{\em boundary} & -\/ ordered 3D points (row-\/wise) defining a closed boundary polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{structnoether_1_1SubsetExtractor_ab8e1d4d988c39a32d805253e096cbdbd}{noether\+::\+Subset\+Extractor}}.
+

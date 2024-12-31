@@ -1,0 +1,4 @@
+<map id="RandomWaypointCreator" name="RandomWaypointCreator">
+<area shape="rect" id="node1" title="Creates a waypoint with random position and orientation." alt="" coords="5,80,192,107"/>
+<area shape="rect" id="node2" href="$struct_waypoint_creator.html" title="Interface for creating waypoints for test tool paths." alt="" coords="33,5,165,32"/>
+</map>

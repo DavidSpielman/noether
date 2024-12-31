@@ -1,0 +1,46 @@
+\hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters}{}\doxysection{noether\+::B\+Spline\+Reconstruction\+::Parameters Struct Reference}
+\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters}\index{noether::BSplineReconstruction::Parameters@{noether::BSplineReconstruction::Parameters}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a6aadc8efe00e1a648fac9dac68952aaf}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a6aadc8efe00e1a648fac9dac68952aaf}} 
+bool \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a6aadc8efe00e1a648fac9dac68952aaf}{verbosity\+\_\+on}} = false
+\begin{DoxyCompactList}\small\item\em print more info \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a70fb1110baf0818db44e0a4fdee1c22f}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a70fb1110baf0818db44e0a4fdee1c22f}} 
+int \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a70fb1110baf0818db44e0a4fdee1c22f}{order}} = 3
+\begin{DoxyCompactList}\small\item\em is the polynomial order of the B-\/spline surface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a438e615b1dc2c7ceeb69f19483f815c1}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a438e615b1dc2c7ceeb69f19483f815c1}} 
+int \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a438e615b1dc2c7ceeb69f19483f815c1}{refinement}} = 3
+\begin{DoxyCompactList}\small\item\em refinement is the number of refinement iterations, where for each iteration control-\/points are inserted \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a665d411d2587e365022bf9fee55bdc08}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a665d411d2587e365022bf9fee55bdc08}} 
+unsigned \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a665d411d2587e365022bf9fee55bdc08}{iterations}} = 1
+\begin{DoxyCompactList}\small\item\em is the number of iterations that are performed after refinement is completed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_af1f888de982b07706e458f144f80a03c}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_af1f888de982b07706e458f144f80a03c}} 
+unsigned \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_af1f888de982b07706e458f144f80a03c}{mesh\+\_\+resolution}} = 50
+\begin{DoxyCompactList}\small\item\em the number of vertices in each parametric direction, used for triangulation of the B-\/spline surface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_accafeb597347838210b8328c842702f8}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_accafeb597347838210b8328c842702f8}} 
+Surf\+Init\+Method \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_accafeb597347838210b8328c842702f8}{surf\+\_\+init\+\_\+method}} = Surf\+Init\+Method\+::\+P\+C\+A\+\_\+\+BB
+\begin{DoxyCompactList}\small\item\em method for creating the initial surface to be fit \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a5ba6561a5d1e98a902c9cb5bb332f328}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a5ba6561a5d1e98a902c9cb5bb332f328}} 
+pcl\+::on\+\_\+nurbs\+::\+Fitting\+Surface\+::\+Parameter \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a5ba6561a5d1e98a902c9cb5bb332f328}{surface\+\_\+params}}
+\begin{DoxyCompactList}\small\item\em parameters to fit the surface \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_ad86e02463e924873e50dd9eb967f22b1}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_ad86e02463e924873e50dd9eb967f22b1}} 
+bool \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_ad86e02463e924873e50dd9eb967f22b1}{clip\+\_\+boundary\+\_\+curve}} = true
+\begin{DoxyCompactList}\small\item\em whether to fit the boundary curve and clip every that extends past it \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a957416b13f9616bff347a248fa0e1e43}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a957416b13f9616bff347a248fa0e1e43}} 
+int \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a957416b13f9616bff347a248fa0e1e43}{boundary\+\_\+fit\+\_\+order}} = 2
+\begin{DoxyCompactList}\small\item\em applicable only when clip\+\_\+boundary\+\_\+curve = true \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_af279175d2dce8043ed69e84b87cd673e}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_af279175d2dce8043ed69e84b87cd673e}} 
+int \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_af279175d2dce8043ed69e84b87cd673e}{boundary\+\_\+start\+C\+Ps}} = 0
+\begin{DoxyCompactList}\small\item\em initial number of control points \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a874b105bcb627a17a0594b49e308d19c}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a874b105bcb627a17a0594b49e308d19c}} 
+bool \mbox{\hyperlink{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a874b105bcb627a17a0594b49e308d19c}{boundary\+\_\+clipping\+\_\+required}} = false
+\begin{DoxyCompactList}\small\item\em if True then algorithm will fail if the boundary could not be clipped \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a4b575e49cefab3af522a9c8bb494871c}\label{structnoether_1_1_b_spline_reconstruction_1_1_parameters_a4b575e49cefab3af522a9c8bb494871c}} 
+pcl\+::on\+\_\+nurbs\+::\+Fitting\+Curve2d\+A\+P\+D\+M\+::\+Fit\+Parameter {\bfseries boundary\+\_\+curve\+\_\+params}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/include/noether\+\_\+tpp/mesh\+\_\+modifiers/bspline\+\_\+reconstruction\+\_\+modifier.\+h\end{DoxyCompactItemize}

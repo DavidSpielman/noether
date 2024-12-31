@@ -1,0 +1,41 @@
+\hypertarget{classnoether_1_1_tool_path_planner_pipeline}{}\doxysection{noether\+::Tool\+Path\+Planner\+Pipeline Class Reference}
+\label{classnoether_1_1_tool_path_planner_pipeline}\index{noether::ToolPathPlannerPipeline@{noether::ToolPathPlannerPipeline}}
+
+
+The \mbox{\hyperlink{classnoether_1_1_tool_path_planner_pipeline}{Tool\+Path\+Planner\+Pipeline}} class -\/ Collects together a set of mesh modifiers, a planner, and a set of tool path modifiers. These sub-\/units then can be called using a single line to pre-\/process meshes, plan paths, and operate on the paths.  
+
+
+
+
+{\ttfamily \#include $<$tool\+\_\+path\+\_\+planner\+\_\+pipeline.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_tool_path_planner_pipeline_a584781311e3de4f80cd50f28a5b70ba0}\label{classnoether_1_1_tool_path_planner_pipeline_a584781311e3de4f80cd50f28a5b70ba0}} 
+{\bfseries Tool\+Path\+Planner\+Pipeline} (Mesh\+Modifier\+::\+Const\+Ptr mesh\+\_\+mod, Tool\+Path\+Planner\+::\+Const\+Ptr planner, Tool\+Path\+Modifier\+::\+Const\+Ptr tool\+\_\+path\+\_\+mod)
+\item 
+\mbox{\Hypertarget{classnoether_1_1_tool_path_planner_pipeline_acbb6f1b5f5ee32670e746327a4c36183}\label{classnoether_1_1_tool_path_planner_pipeline_acbb6f1b5f5ee32670e746327a4c36183}} 
+std\+::vector$<$ \mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} $>$ {\bfseries plan} (pcl\+::\+Polygon\+Mesh mesh) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_tool_path_planner_pipeline_af604b96c051690044fdbd100e14dcdad}\label{classnoether_1_1_tool_path_planner_pipeline_af604b96c051690044fdbd100e14dcdad}} 
+Mesh\+Modifier\+::\+Const\+Ptr {\bfseries mesh\+\_\+modifier}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_tool_path_planner_pipeline_a217c3567f28734954f27593e1de3aeb5}\label{classnoether_1_1_tool_path_planner_pipeline_a217c3567f28734954f27593e1de3aeb5}} 
+Tool\+Path\+Planner\+::\+Const\+Ptr {\bfseries planner}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_tool_path_planner_pipeline_ab647c5ac9996bcdf603cd8604f99c143}\label{classnoether_1_1_tool_path_planner_pipeline_ab647c5ac9996bcdf603cd8604f99c143}} 
+Tool\+Path\+Modifier\+::\+Const\+Ptr {\bfseries tool\+\_\+path\+\_\+modifier}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classnoether_1_1_tool_path_planner_pipeline}{Tool\+Path\+Planner\+Pipeline}} class -\/ Collects together a set of mesh modifiers, a planner, and a set of tool path modifiers. These sub-\/units then can be called using a single line to pre-\/process meshes, plan paths, and operate on the paths. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/include/noether\+\_\+tpp/core/tool\+\_\+path\+\_\+planner\+\_\+pipeline.\+h\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/src/core/tool\+\_\+path\+\_\+planner\+\_\+pipeline.\+cpp\end{DoxyCompactItemize}

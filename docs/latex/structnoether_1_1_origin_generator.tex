@@ -1,0 +1,43 @@
+\hypertarget{structnoether_1_1_origin_generator}{}\doxysection{noether\+::Origin\+Generator Struct Reference}
+\label{structnoether_1_1_origin_generator}\index{noether::OriginGenerator@{noether::OriginGenerator}}
+
+
+Interface for setting the start point from which to generate toolpaths.  
+
+
+
+
+{\ttfamily \#include $<$raster\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Origin\+Generator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structnoether_1_1_origin_generator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1_origin_generator_aa89675836ae05a1ccf27039000de813d}\label{structnoether_1_1_origin_generator_aa89675836ae05a1ccf27039000de813d}} 
+using {\bfseries Ptr} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structnoether_1_1_origin_generator}{Origin\+Generator}} $>$
+\item 
+\mbox{\Hypertarget{structnoether_1_1_origin_generator_af154ba676994968f9d53bd5507f1c3ac}\label{structnoether_1_1_origin_generator_af154ba676994968f9d53bd5507f1c3ac}} 
+using {\bfseries Const\+Ptr} = std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{structnoether_1_1_origin_generator}{Origin\+Generator}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1_origin_generator_a9620da1c80cf43b4c95f3e1714e08a42}\label{structnoether_1_1_origin_generator_a9620da1c80cf43b4c95f3e1714e08a42}} 
+virtual Eigen\+::\+Vector3d {\bfseries generate} (const pcl\+::\+Polygon\+Mesh \&mesh) const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for setting the start point from which to generate toolpaths. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/include/noether\+\_\+tpp/tool\+\_\+path\+\_\+planners/raster/\mbox{\hyperlink{raster__planner_8h}{raster\+\_\+planner.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="noether::BoundaryEdgePlanner" name="noether::BoundaryEdgePlanner">
+<area shape="rect" id="node1" title="Edge tool path planner that creates paths around the boundary edges of a mesh (exterior and interior)..." alt="" coords="5,155,228,181"/>
+<area shape="rect" id="node2" href="$classnoether_1_1_edge_planner.html" title="The EdgePlanner class &#45; A specification of the tool path planner interface for generating paths aroun..." alt="" coords="36,80,197,107"/>
+<area shape="rect" id="node3" href="$structnoether_1_1_tool_path_planner.html" title="Interface for a tool path planner that operates on a mesh." alt="" coords="25,5,209,32"/>
+</map>

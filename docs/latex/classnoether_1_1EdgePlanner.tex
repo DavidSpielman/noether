@@ -1,0 +1,46 @@
+\hypertarget{classnoether_1_1EdgePlanner}{}\doxysection{noether\+::Edge\+Planner Class Reference}
+\label{classnoether_1_1EdgePlanner}\index{noether::EdgePlanner@{noether::EdgePlanner}}
+
+
+The \mbox{\hyperlink{classnoether_1_1EdgePlanner}{Edge\+Planner}} class -\/ A specification of the tool path planner interface for generating paths around the edges of surfaces. Each edge planner will return a list of closed-\/loop edges. Segments will be in sequential order in the Tool\+Path. The Tool\+Paths (closed loops) are ordered by descending length of the closed loops. All loops will start near a specified point, and all loops will process in the same direction.  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Edge\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classnoether_1_1EdgePlanner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Edge\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classnoether_1_1EdgePlanner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1EdgePlanner_a8f42ee3a04e399361357ada1a4e51285}\label{classnoether_1_1EdgePlanner_a8f42ee3a04e399361357ada1a4e51285}} 
+\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} {\bfseries plan} (const pcl\+::\+Polygon\+Mesh \&mesh) const override final
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1EdgePlanner_a1d55ad83fe56e2d7f6f6e0a61c6f57c4}\label{classnoether_1_1EdgePlanner_a1d55ad83fe56e2d7f6f6e0a61c6f57c4}} 
+virtual \mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} \mbox{\hyperlink{classnoether_1_1EdgePlanner_a1d55ad83fe56e2d7f6f6e0a61c6f57c4}{plan\+Impl}} (const pcl\+::\+Polygon\+Mesh \&mesh) const =0
+\begin{DoxyCompactList}\small\item\em Hook for inherited classes to implement the edge planning process before sending to the common edge tool path modifiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classnoether_1_1EdgePlanner}{Edge\+Planner}} class -\/ A specification of the tool path planner interface for generating paths around the edges of surfaces. Each edge planner will return a list of closed-\/loop edges. Segments will be in sequential order in the Tool\+Path. The Tool\+Paths (closed loops) are ordered by descending length of the closed loops. All loops will start near a specified point, and all loops will process in the same direction. 

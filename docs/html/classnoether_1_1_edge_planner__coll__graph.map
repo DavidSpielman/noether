@@ -1,0 +1,4 @@
+<map id="noether::EdgePlanner" name="noether::EdgePlanner">
+<area shape="rect" id="node1" title="The EdgePlanner class &#45; A specification of the tool path planner interface for generating paths aroun..." alt="" coords="17,80,178,107"/>
+<area shape="rect" id="node2" href="$structnoether_1_1_tool_path_planner.html" title="Interface for a tool path planner that operates on a mesh." alt="" coords="5,5,189,32"/>
+</map>

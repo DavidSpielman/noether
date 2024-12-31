@@ -1,0 +1,4 @@
+<map id="noether::PCARotatedDirectionGenerator" name="noether::PCARotatedDirectionGenerator">
+<area shape="rect" id="node1" title="Rotates a direction vector provided by another direction generator about the smallest principal axis ..." alt="" coords="5,80,221,121"/>
+<area shape="rect" id="node2" href="$structnoether_1_1DirectionGenerator.html" title="Interface for generating the direction of raster paths. This direction represents the line along whic..." alt="" coords="11,5,215,32"/>
+</map>

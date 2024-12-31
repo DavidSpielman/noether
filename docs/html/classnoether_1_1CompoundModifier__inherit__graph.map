@@ -1,0 +1,4 @@
+<map id="noether::CompoundModifier" name="noether::CompoundModifier">
+<area shape="rect" id="node1" title="Modifier that chains together other modifiers." alt="" coords="5,80,209,107"/>
+<area shape="rect" id="node2" href="$structnoether_1_1ToolPathModifier.html" title="A common interface for functions that alter a generated toolpath." alt="" coords="13,5,202,32"/>
+</map>

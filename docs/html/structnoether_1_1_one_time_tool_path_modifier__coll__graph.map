@@ -1,0 +1,4 @@
+<map id="noether::OneTimeToolPathModifier" name="noether::OneTimeToolPathModifier">
+<area shape="rect" id="node1" title="An extension of the ToolPathModifier interface that requires a modifier to not cause additional chang..." alt="" coords="5,80,199,121"/>
+<area shape="rect" id="node2" href="$structnoether_1_1_tool_path_modifier.html" title="A common interface for functions that alter a generated toolpath." alt="" coords="7,5,197,32"/>
+</map>

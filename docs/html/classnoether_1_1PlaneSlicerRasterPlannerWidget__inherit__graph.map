@@ -1,0 +1,7 @@
+<map id="noether::PlaneSlicerRasterPlannerWidget" name="noether::PlaneSlicerRasterPlannerWidget">
+<area shape="rect" id="node1" title=" " alt="" coords="17,229,211,271"/>
+<area shape="rect" id="node5" href="$classnoether_1_1CrossHatchPlaneSlicerRasterPlannerWidget.html" title=" " alt="" coords="17,319,211,360"/>
+<area shape="rect" id="node2" href="$classnoether_1_1RasterPlannerWidget.html" title=" " alt="" coords="5,155,223,181"/>
+<area shape="rect" id="node3" href="$classnoether_1_1BaseWidget.html" title="Base class for a widget &quot;factory&quot; that can produce classes of a specifiable type." alt="" coords="28,80,200,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="75,5,153,32"/>
+</map>

@@ -1,0 +1,39 @@
+\hypertarget{structnoether_1_1ToolPathPlanner}{}\doxysection{noether\+::Tool\+Path\+Planner Struct Reference}
+\label{structnoether_1_1ToolPathPlanner}\index{noether::ToolPathPlanner@{noether::ToolPathPlanner}}
+
+
+Interface for a tool path planner that operates on a mesh.  
+
+
+
+
+{\ttfamily \#include $<$tool\+\_\+path\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Tool\+Path\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structnoether_1_1ToolPathPlanner__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1ToolPathPlanner_ace9ea509a939fb8559b7c7ce9f304897}\label{structnoether_1_1ToolPathPlanner_ace9ea509a939fb8559b7c7ce9f304897}} 
+using {\bfseries Ptr} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structnoether_1_1ToolPathPlanner}{Tool\+Path\+Planner}} $>$
+\item 
+\mbox{\Hypertarget{structnoether_1_1ToolPathPlanner_a95c0aaa94e70e66c3e37fdc2545a9498}\label{structnoether_1_1ToolPathPlanner_a95c0aaa94e70e66c3e37fdc2545a9498}} 
+using {\bfseries Const\+Ptr} = std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{structnoether_1_1ToolPathPlanner}{Tool\+Path\+Planner}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1ToolPathPlanner_a9c41aa1ebc7763b51546eef474041839}\label{structnoether_1_1ToolPathPlanner_a9c41aa1ebc7763b51546eef474041839}} 
+virtual \mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} {\bfseries plan} (const pcl\+::\+Polygon\+Mesh \&mesh) const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for a tool path planner that operates on a mesh. 

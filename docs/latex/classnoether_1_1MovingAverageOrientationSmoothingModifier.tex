@@ -1,0 +1,49 @@
+\hypertarget{classnoether_1_1MovingAverageOrientationSmoothingModifier}{}\doxysection{noether\+::Moving\+Average\+Orientation\+Smoothing\+Modifier Class Reference}
+\label{classnoether_1_1MovingAverageOrientationSmoothingModifier}\index{noether::MovingAverageOrientationSmoothingModifier@{noether::MovingAverageOrientationSmoothingModifier}}
+
+
+Applies a moving average filter to waypoints in each tool path segment to smooth their orientations.  
+
+
+
+
+{\ttfamily \#include $<$moving\+\_\+average\+\_\+orientation\+\_\+smoothing\+\_\+modifier.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Moving\+Average\+Orientation\+Smoothing\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{classnoether_1_1MovingAverageOrientationSmoothingModifier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Moving\+Average\+Orientation\+Smoothing\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{classnoether_1_1MovingAverageOrientationSmoothingModifier__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1MovingAverageOrientationSmoothingModifier_a53f5d3f279adce874d29c3ce299f9d4f}\label{classnoether_1_1MovingAverageOrientationSmoothingModifier_a53f5d3f279adce874d29c3ce299f9d4f}} 
+{\bfseries Moving\+Average\+Orientation\+Smoothing\+Modifier} (std\+::size\+\_\+t window\+\_\+size)
+\item 
+\mbox{\Hypertarget{classnoether_1_1MovingAverageOrientationSmoothingModifier_a6a6855994bc4badaab43c975f68d1816}\label{classnoether_1_1MovingAverageOrientationSmoothingModifier_a6a6855994bc4badaab43c975f68d1816}} 
+\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} {\bfseries modify} (\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} tool\+\_\+paths) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1MovingAverageOrientationSmoothingModifier_ab7cc3afb7514d0eb498d454a071fd689}\label{classnoether_1_1MovingAverageOrientationSmoothingModifier_ab7cc3afb7514d0eb498d454a071fd689}} 
+const std\+::size\+\_\+t \mbox{\hyperlink{classnoether_1_1MovingAverageOrientationSmoothingModifier_ab7cc3afb7514d0eb498d454a071fd689}{window\+\_\+size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Moving average window size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Applies a moving average filter to waypoints in each tool path segment to smooth their orientations. 

@@ -1,0 +1,90 @@
+\hypertarget{classnoether_1_1PlaneSlicerRasterPlanner}{}\doxysection{noether\+::Plane\+Slicer\+Raster\+Planner Class Reference}
+\label{classnoether_1_1PlaneSlicerRasterPlanner}\index{noether::PlaneSlicerRasterPlanner@{noether::PlaneSlicerRasterPlanner}}
+
+
+An implementation of the Raster Planner using a series of parallel cutting planes. This implementation works best on approximately planar parts. The direction generator defines the direction of the raster cut. The cut normal (i.\+e., the raster step direction) is defined by the cross product of the cut direction and the smallest principal axis of the mesh.  
+
+
+
+
+{\ttfamily \#include $<$plane\+\_\+slicer\+\_\+raster\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Plane\+Slicer\+Raster\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classnoether_1_1PlaneSlicerRasterPlanner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Plane\+Slicer\+Raster\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classnoether_1_1PlaneSlicerRasterPlanner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1PlaneSlicerRasterPlanner_a7b5a4af2ac6d700d23eef768ac9d92d3}\label{classnoether_1_1PlaneSlicerRasterPlanner_a7b5a4af2ac6d700d23eef768ac9d92d3}} 
+{\bfseries Plane\+Slicer\+Raster\+Planner} (Direction\+Generator\+::\+Const\+Ptr dir\+\_\+gen, Origin\+Generator\+::\+Const\+Ptr origin\+\_\+gen)
+\item 
+\mbox{\Hypertarget{classnoether_1_1PlaneSlicerRasterPlanner_a488cc5fb9e3d560aad2d7c019ec4da72}\label{classnoether_1_1PlaneSlicerRasterPlanner_a488cc5fb9e3d560aad2d7c019ec4da72}} 
+void {\bfseries set\+Search\+Radius} (const double search\+\_\+radius)
+\item 
+\mbox{\Hypertarget{classnoether_1_1PlaneSlicerRasterPlanner_ad1c4db89a840c1b36dfe4c1a0e1f66f4}\label{classnoether_1_1PlaneSlicerRasterPlanner_ad1c4db89a840c1b36dfe4c1a0e1f66f4}} 
+void {\bfseries set\+Min\+Segment\+Size} (const double min\+\_\+segment\+\_\+size)
+\item 
+\mbox{\Hypertarget{classnoether_1_1PlaneSlicerRasterPlanner_a1e1c04bc4bb6f21cf26107d1fafcc69d}\label{classnoether_1_1PlaneSlicerRasterPlanner_a1e1c04bc4bb6f21cf26107d1fafcc69d}} 
+void {\bfseries generate\+Rasters\+Bidirectionally} (const bool bidirectional)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} \mbox{\hyperlink{classnoether_1_1PlaneSlicerRasterPlanner_ae77bdca187091c4d163f677a8b09155a}{plan\+Impl}} (const pcl\+::\+Polygon\+Mesh \&mesh) const
+\begin{DoxyCompactList}\small\item\em Implementation of the tool path planning capability. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1PlaneSlicerRasterPlanner_a0a7b248357f7cae6f9b8cd8f5dcc951f}\label{classnoether_1_1PlaneSlicerRasterPlanner_a0a7b248357f7cae6f9b8cd8f5dcc951f}} 
+bool \mbox{\hyperlink{classnoether_1_1PlaneSlicerRasterPlanner_a0a7b248357f7cae6f9b8cd8f5dcc951f}{bidirectional\+\_\+}} = true
+\begin{DoxyCompactList}\small\item\em Flag indicating whether rasters should be generated in the direction of both the cut normal and its negation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnoether_1_1PlaneSlicerRasterPlanner_a3d331e49b7ac74d864b2390772c6074d}\label{classnoether_1_1PlaneSlicerRasterPlanner_a3d331e49b7ac74d864b2390772c6074d}} 
+double \mbox{\hyperlink{classnoether_1_1PlaneSlicerRasterPlanner_a3d331e49b7ac74d864b2390772c6074d}{min\+\_\+segment\+\_\+size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Minimum length of valid segment (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnoether_1_1PlaneSlicerRasterPlanner_a7ac962e3ad785e02f85fc489c93ef5e1}\label{classnoether_1_1PlaneSlicerRasterPlanner_a7ac962e3ad785e02f85fc489c93ef5e1}} 
+double \mbox{\hyperlink{classnoether_1_1PlaneSlicerRasterPlanner_a7ac962e3ad785e02f85fc489c93ef5e1}{search\+\_\+radius\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Search radius for calculating normals (m) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An implementation of the Raster Planner using a series of parallel cutting planes. This implementation works best on approximately planar parts. The direction generator defines the direction of the raster cut. The cut normal (i.\+e., the raster step direction) is defined by the cross product of the cut direction and the smallest principal axis of the mesh. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnoether_1_1PlaneSlicerRasterPlanner_ae77bdca187091c4d163f677a8b09155a}\label{classnoether_1_1PlaneSlicerRasterPlanner_ae77bdca187091c4d163f677a8b09155a}} 
+\index{noether::PlaneSlicerRasterPlanner@{noether::PlaneSlicerRasterPlanner}!planImpl@{planImpl}}
+\index{planImpl@{planImpl}!noether::PlaneSlicerRasterPlanner@{noether::PlaneSlicerRasterPlanner}}
+\doxysubsubsection{\texorpdfstring{planImpl()}{planImpl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} noether\+::\+Plane\+Slicer\+Raster\+Planner\+::plan\+Impl (\begin{DoxyParamCaption}\item[{const pcl\+::\+Polygon\+Mesh \&}]{mesh }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of the tool path planning capability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classnoether_1_1RasterPlanner_a7f6c2e879db5752afb5e206eb9793f98}{noether\+::\+Raster\+Planner}}.
+

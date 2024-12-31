@@ -1,0 +1,4 @@
+<map id="noether::CircularLeadOutModifier" name="noether::CircularLeadOutModifier">
+<area shape="rect" id="node1" title="Modifier that adds exit waypoints in a circular arc (with fixed orientation) to the end of a trajecto..." alt="" coords="8,80,192,121"/>
+<area shape="rect" id="node2" href="$structnoether_1_1ToolPathModifier.html" title="A common interface for functions that alter a generated toolpath." alt="" coords="5,5,195,32"/>
+</map>

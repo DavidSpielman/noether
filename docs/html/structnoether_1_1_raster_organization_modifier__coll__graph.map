@@ -1,0 +1,4 @@
+<map id="noether::RasterOrganizationModifier" name="noether::RasterOrganizationModifier">
+<area shape="rect" id="node1" title="Organizes a tool path into a raster&#45;style pattern." alt="" coords="5,80,211,121"/>
+<area shape="rect" id="node2" href="$structnoether_1_1_tool_path_modifier.html" title="A common interface for functions that alter a generated toolpath." alt="" coords="13,5,203,32"/>
+</map>

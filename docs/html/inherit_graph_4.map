@@ -1,0 +1,39 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,1019,84,1046"/>
+<area shape="rect" id="node2" href="$classnoether_1_1BaseWidget.html" title="Base class for a widget &quot;factory&quot; that can produce classes of a specifiable type." alt="" coords="153,895,349,922"/>
+<area shape="rect" id="node34" href="$classnoether_1_1ConfigurableTPPPipelineWidget.html" title=" " alt="" coords="132,947,371,988"/>
+<area shape="rect" id="node35" href="$classnoether_1_1PluginLoaderWidget.html" title="Widget for loading widget plugins." alt="" coords="146,1012,357,1053"/>
+<area shape="rect" id="node36" href="$classnoether_1_1TPPPipelineWidget.html" title="Widget for creating a tool path planning pipeline." alt="" coords="150,1078,353,1105"/>
+<area shape="rect" id="node37" href="$classnoether_1_1PluginLoaderWidget.html" title=" " alt="" coords="146,1129,357,1171"/>
+<area shape="rect" id="node3" href="$structnoether_1_1AABBOriginGeneratorWidget.html" title=" " alt="" coords="436,5,656,47"/>
+<area shape="rect" id="node4" href="$classnoether_1_1BiasedToolDragOrientationToolPathModifierWidget.html" title=" " alt="" coords="419,71,673,112"/>
+<area shape="rect" id="node5" href="$classnoether_1_1BoundaryEdgePlannerWidget.html" title=" " alt="" coords="435,136,657,177"/>
+<area shape="rect" id="node6" href="$structnoether_1_1CentroidOriginGeneratorWidget.html" title=" " alt="" coords="427,201,665,243"/>
+<area shape="rect" id="node7" href="$classnoether_1_1CircularLeadInToolPathModifierWidget.html" title=" " alt="" coords="447,267,645,308"/>
+<area shape="rect" id="node8" href="$classnoether_1_1CircularLeadOutToolPathModifierWidget.html" title=" " alt="" coords="454,332,638,373"/>
+<area shape="rect" id="node9" href="$structnoether_1_1ConcatenateModifierWidget.html" title=" " alt="" coords="438,397,654,439"/>
+<area shape="rect" id="node10" href="$structnoether_1_1DirectionOfTravelOrientationModifierWidget.html" title=" " alt="" coords="449,463,643,504"/>
+<area shape="rect" id="node11" href="$classnoether_1_1EuclideanClusteringMeshModifierWidget.html" title=" " alt="" coords="441,528,651,569"/>
+<area shape="rect" id="node12" href="$classnoether_1_1FillHolesModifierWidget.html" title=" " alt="" coords="451,593,641,635"/>
+<area shape="rect" id="node13" href="$classnoether_1_1FixedDirectionGeneratorWidget.html" title=" " alt="" coords="427,659,665,700"/>
+<area shape="rect" id="node14" href="$classnoether_1_1FixedOrientationModifierWidget.html" title=" " alt="" coords="453,724,639,765"/>
+<area shape="rect" id="node15" href="$classnoether_1_1FixedOriginGeneratorWidget.html" title=" " alt="" coords="437,789,655,831"/>
+<area shape="rect" id="node16" href="$classnoether_1_1LinearApproachToolPathModifierWidget.html" title=" " alt="" coords="443,855,649,896"/>
+<area shape="rect" id="node18" href="$classnoether_1_1MovingAverageOrientationSmoothingModifierWidget.html" title=" " alt="" coords="419,920,673,961"/>
+<area shape="rect" id="node19" href="$classnoether_1_1NormalEstimationPCLMeshModifierWidget.html" title=" " alt="" coords="447,985,645,1027"/>
+<area shape="rect" id="node20" href="$classnoether_1_1NormalsFromMeshFacesMeshModifierWidget.html" title=" " alt="" coords="445,1051,647,1092"/>
+<area shape="rect" id="node21" href="$classnoether_1_1OffsetModifierWidget.html" title=" " alt="" coords="436,1117,656,1143"/>
+<area shape="rect" id="node22" href="$classnoether_1_1PlaneProjectionMeshModifierWidget.html" title=" " alt="" coords="455,1168,637,1209"/>
+<area shape="rect" id="node23" href="$classnoether_1_1PrincipalAxisDirectionGeneratorWidget.html" title=" " alt="" coords="435,1233,657,1275"/>
+<area shape="rect" id="node24" href="$structnoether_1_1RasterOrganizationModifierWidget.html" title=" " alt="" coords="443,1299,649,1340"/>
+<area shape="rect" id="node25" href="$classnoether_1_1RasterPlannerWidget.html" title=" " alt="" coords="437,1365,655,1391"/>
+<area shape="rect" id="node28" href="$structnoether_1_1SnakeOrganizationModifierWidget.html" title=" " alt="" coords="445,1416,647,1457"/>
+<area shape="rect" id="node29" href="$classnoether_1_1StandardEdgePathsOrganizationModifierWidget.html" title=" " alt="" coords="443,1481,649,1523"/>
+<area shape="rect" id="node30" href="$classnoether_1_1ToolDragOrientationToolPathModifierWidget.html" title=" " alt="" coords="441,1547,651,1588"/>
+<area shape="rect" id="node31" href="$structnoether_1_1UniformOrientationModifierWidget.html" title=" " alt="" coords="443,1612,649,1653"/>
+<area shape="rect" id="node32" href="$classnoether_1_1UniformSpacingLinearModifierWidget.html" title=" " alt="" coords="434,1677,658,1719"/>
+<area shape="rect" id="node33" href="$classnoether_1_1UniformSpacingSplineModifierWidget.html" title=" " alt="" coords="434,1743,658,1784"/>
+<area shape="rect" id="node17" href="$classnoether_1_1LinearDepartureToolPathModifierWidget.html" title=" " alt="" coords="726,855,911,896"/>
+<area shape="rect" id="node26" href="$classnoether_1_1PlaneSlicerRasterPlannerWidget.html" title=" " alt="" coords="721,1357,916,1399"/>
+<area shape="rect" id="node27" href="$classnoether_1_1CrossHatchPlaneSlicerRasterPlannerWidget.html" title=" " alt="" coords="964,1357,1159,1399"/>
+</map>

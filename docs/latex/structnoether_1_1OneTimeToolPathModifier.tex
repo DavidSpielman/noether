@@ -1,0 +1,42 @@
+\hypertarget{structnoether_1_1OneTimeToolPathModifier}{}\doxysection{noether\+::One\+Time\+Tool\+Path\+Modifier Struct Reference}
+\label{structnoether_1_1OneTimeToolPathModifier}\index{noether::OneTimeToolPathModifier@{noether::OneTimeToolPathModifier}}
+
+
+An extension of the \mbox{\hyperlink{structnoether_1_1ToolPathModifier}{Tool\+Path\+Modifier}} interface that requires a modifier to not cause additional changes if run again.  
+
+
+
+
+{\ttfamily \#include $<$tool\+\_\+path\+\_\+modifier.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::One\+Time\+Tool\+Path\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structnoether_1_1OneTimeToolPathModifier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::One\+Time\+Tool\+Path\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{structnoether_1_1OneTimeToolPathModifier__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1OneTimeToolPathModifier_a48ca2e94f5dcb578cf3913317304a577}\label{structnoether_1_1OneTimeToolPathModifier_a48ca2e94f5dcb578cf3913317304a577}} 
+virtual \mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} {\bfseries modify} (\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} toolpaths) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An extension of the \mbox{\hyperlink{structnoether_1_1ToolPathModifier}{Tool\+Path\+Modifier}} interface that requires a modifier to not cause additional changes if run again. 
+
+This behavior will be enforced via unit test. New modifiers should be implemented as One\+Time\+Tool\+Path\+Modifiers if possible. The default behavior matches that of the tool path modifier. 

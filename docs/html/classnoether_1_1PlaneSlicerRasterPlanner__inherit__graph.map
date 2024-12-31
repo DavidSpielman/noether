@@ -1,0 +1,5 @@
+<map id="noether::PlaneSlicerRasterPlanner" name="noether::PlaneSlicerRasterPlanner">
+<area shape="rect" id="node1" title="An implementation of the Raster Planner using a series of parallel cutting planes...." alt="" coords="5,155,200,196"/>
+<area shape="rect" id="node2" href="$classnoether_1_1RasterPlanner.html" title="A specification of the tool path planner for covering surfaces in repeating, evenly spaced path lines..." alt="" coords="17,80,188,107"/>
+<area shape="rect" id="node3" href="$structnoether_1_1ToolPathPlanner.html" title="Interface for a tool path planner that operates on a mesh." alt="" coords="11,5,195,32"/>
+</map>

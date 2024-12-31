@@ -1,0 +1,45 @@
+\hypertarget{classnoether_1_1StandardEdgePathsOrganizationModifier}{}\doxysection{noether\+::Standard\+Edge\+Paths\+Organization\+Modifier Class Reference}
+\label{classnoether_1_1StandardEdgePathsOrganizationModifier}\index{noether::StandardEdgePathsOrganizationModifier@{noether::StandardEdgePathsOrganizationModifier}}
+
+
+Organizes a set of tool paths into a standard configuration for edge paths.  
+
+
+
+
+{\ttfamily \#include $<$standard\+\_\+edge\+\_\+paths\+\_\+organization\+\_\+modifier.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Standard\+Edge\+Paths\+Organization\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classnoether_1_1StandardEdgePathsOrganizationModifier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Standard\+Edge\+Paths\+Organization\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classnoether_1_1StandardEdgePathsOrganizationModifier__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1StandardEdgePathsOrganizationModifier_ab779e126d3bca137458f057608db0f7a}\label{classnoether_1_1StandardEdgePathsOrganizationModifier_ab779e126d3bca137458f057608db0f7a}} 
+{\bfseries Standard\+Edge\+Paths\+Organization\+Modifier} (const Eigen\+::\+Vector3d \&start\+\_\+reference=Eigen\+::\+Vector3d\+::\+Zero())
+\item 
+\mbox{\Hypertarget{classnoether_1_1StandardEdgePathsOrganizationModifier_ac58ff0446954b86ae80fcb93547c27c3}\label{classnoether_1_1StandardEdgePathsOrganizationModifier_ac58ff0446954b86ae80fcb93547c27c3}} 
+\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} {\bfseries modify} (\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}}) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Organizes a set of tool paths into a standard configuration for edge paths. 
+
+Segments are ordered in a tool path such that the start of one segment is as close as possible to the end of the previous segment. The first segment is chosen as the one whose first waypoint is closest to a reference position. Tool path segments are ordered in the top-\/level container in order of length, from longest to shortest. Note\+: waypoints are expected to be ordered correctly on input to the modifier 

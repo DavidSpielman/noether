@@ -1,0 +1,76 @@
+\hypertarget{structnoether_1_1_extruded_polygon_sub_mesh_extractor}{}\doxysection{noether\+::Extruded\+Polygon\+Sub\+Mesh\+Extractor Struct Reference}
+\label{structnoether_1_1_extruded_polygon_sub_mesh_extractor}\index{noether::ExtrudedPolygonSubMeshExtractor@{noether::ExtrudedPolygonSubMeshExtractor}}
+
+
+Extracts the submesh with the vertices captured inside an extruded polygon defined by the input boundary points.  
+
+
+
+
+{\ttfamily \#include $<$extruded\+\_\+polygon\+\_\+subset\+\_\+extractor.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Extruded\+Polygon\+Sub\+Mesh\+Extractor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{structnoether_1_1_extruded_polygon_sub_mesh_extractor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Extruded\+Polygon\+Sub\+Mesh\+Extractor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structnoether_1_1_extruded_polygon_sub_mesh_extractor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+pcl\+::\+Polygon\+Mesh \mbox{\hyperlink{structnoether_1_1_extruded_polygon_sub_mesh_extractor_adb43b3eeff25066148e01059158c445c}{extract}} (const pcl\+::\+Polygon\+Mesh \&mesh, const Eigen\+::\+Matrix\+X3d \&boundary) const override
+\begin{DoxyCompactList}\small\item\em Extracts a submesh from a mesh given a set of boundary points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1_extruded_polygon_sub_mesh_extractor_a5dfa4db56fd2ee6b5189792f99875426}\label{structnoether_1_1_extruded_polygon_sub_mesh_extractor_a5dfa4db56fd2ee6b5189792f99875426}} 
+\mbox{\hyperlink{structnoether_1_1_extruded_polygon_subset_extractor}{Extruded\+Polygon\+Subset\+Extractor}} {\bfseries extractor}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extracts the submesh with the vertices captured inside an extruded polygon defined by the input boundary points. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnoether_1_1_extruded_polygon_sub_mesh_extractor_adb43b3eeff25066148e01059158c445c}\label{structnoether_1_1_extruded_polygon_sub_mesh_extractor_adb43b3eeff25066148e01059158c445c}} 
+\index{noether::ExtrudedPolygonSubMeshExtractor@{noether::ExtrudedPolygonSubMeshExtractor}!extract@{extract}}
+\index{extract@{extract}!noether::ExtrudedPolygonSubMeshExtractor@{noether::ExtrudedPolygonSubMeshExtractor}}
+\doxysubsubsection{\texorpdfstring{extract()}{extract()}}
+{\footnotesize\ttfamily pcl\+::\+Polygon\+Mesh noether\+::\+Extruded\+Polygon\+Sub\+Mesh\+Extractor\+::extract (\begin{DoxyParamCaption}\item[{const pcl\+::\+Polygon\+Mesh \&}]{mesh,  }\item[{const Eigen\+::\+Matrix\+X3d \&}]{boundary }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Extracts a submesh from a mesh given a set of boundary points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+{\em boundary} & -\/ ordered 3D points (row-\/wise) defining a closed boundary polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{structnoether_1_1_sub_mesh_extractor_aff70cdd96805edf7504517252122ec1a}{noether\+::\+Sub\+Mesh\+Extractor}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/include/noether\+\_\+tpp/mesh\+\_\+modifiers/subset\+\_\+extraction/extruded\+\_\+polygon\+\_\+subset\+\_\+extractor.\+h\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/src/mesh\+\_\+modifiers/subset\+\_\+extraction/extruded\+\_\+polygon\+\_\+subset\+\_\+extractor.\+cpp\end{DoxyCompactItemize}

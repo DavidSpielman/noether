@@ -1,0 +1,54 @@
+\hypertarget{structnoether_1_1RasterPlannerFactory}{}\doxysection{noether\+::Raster\+Planner\+Factory Struct Reference}
+\label{structnoether_1_1RasterPlannerFactory}\index{noether::RasterPlannerFactory@{noether::RasterPlannerFactory}}
+
+
+Interface for creating implementations of raster tool path planners.  
+
+
+
+
+{\ttfamily \#include $<$raster\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Raster\+Planner\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{structnoether_1_1RasterPlannerFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Raster\+Planner\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{structnoether_1_1RasterPlannerFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1RasterPlannerFactory_af01fd95ab24c6c408d1aec6fae399782}\label{structnoether_1_1RasterPlannerFactory_af01fd95ab24c6c408d1aec6fae399782}} 
+double \mbox{\hyperlink{structnoether_1_1RasterPlannerFactory_af01fd95ab24c6c408d1aec6fae399782}{point\+\_\+spacing}}
+\begin{DoxyCompactList}\small\item\em Distance between waypoints on the same raster line (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1RasterPlannerFactory_a411d84042be751b1835fa9978027eb74}\label{structnoether_1_1RasterPlannerFactory_a411d84042be751b1835fa9978027eb74}} 
+double \mbox{\hyperlink{structnoether_1_1RasterPlannerFactory_a411d84042be751b1835fa9978027eb74}{line\+\_\+spacing}}
+\begin{DoxyCompactList}\small\item\em Distance between raster lines. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1RasterPlannerFactory_a8c0fbbac65e38316e8d423ab8891803f}\label{structnoether_1_1RasterPlannerFactory_a8c0fbbac65e38316e8d423ab8891803f}} 
+double \mbox{\hyperlink{structnoether_1_1RasterPlannerFactory_a8c0fbbac65e38316e8d423ab8891803f}{min\+\_\+hole\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Minimum size of hole in a mesh for which the planner should split a raster line that crosses over the hole into multiple segments. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1RasterPlannerFactory_a2598303a5b04ef0a5b3747be2834ebdf}\label{structnoether_1_1RasterPlannerFactory_a2598303a5b04ef0a5b3747be2834ebdf}} 
+std\+::function$<$ std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{structnoether_1_1DirectionGenerator}{Direction\+Generator}} $>$)$>$ \mbox{\hyperlink{structnoether_1_1RasterPlannerFactory_a2598303a5b04ef0a5b3747be2834ebdf}{direction\+\_\+gen}}
+\begin{DoxyCompactList}\small\item\em Function for creating a raster direction generator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnoether_1_1RasterPlannerFactory_a9f45a061afe4eac6a3596b83e6775702}\label{structnoether_1_1RasterPlannerFactory_a9f45a061afe4eac6a3596b83e6775702}} 
+std\+::function$<$ std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{structnoether_1_1OriginGenerator}{Origin\+Generator}} $>$)$>$ \mbox{\hyperlink{structnoether_1_1RasterPlannerFactory_a9f45a061afe4eac6a3596b83e6775702}{origin\+\_\+gen}}
+\begin{DoxyCompactList}\small\item\em Function for creating a raster origin generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Interface for creating implementations of raster tool path planners. 
+
+This class contains the generic parameters for configuring raster tool path planners 

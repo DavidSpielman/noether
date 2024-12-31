@@ -1,0 +1,6 @@
+<map id="noether::DirectionGenerator" name="noether::DirectionGenerator">
+<area shape="rect" id="node1" title="Interface for generating the direction of raster paths. This direction represents the line along whic..." alt="" coords="5,64,209,91"/>
+<area shape="rect" id="node2" href="$classnoether_1_1_fixed_direction_generator.html" title="Generates the raster direction based on a fixed input." alt="" coords="257,5,496,32"/>
+<area shape="rect" id="node3" href="$classnoether_1_1_p_c_a_rotated_direction_generator.html" title="Rotates a direction vector provided by another direction generator about the smallest principal axis ..." alt="" coords="269,57,485,98"/>
+<area shape="rect" id="node4" href="$classnoether_1_1_principal_axis_direction_generator.html" title="Generates the raster direction along the largest principal axis of the input mesh." alt="" coords="265,122,488,163"/>
+</map>

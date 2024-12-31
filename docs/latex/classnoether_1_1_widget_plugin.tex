@@ -1,0 +1,56 @@
+\hypertarget{classnoether_1_1_widget_plugin}{}\doxysection{noether\+::Widget\+Plugin$<$ T $>$ Class Template Reference}
+\label{classnoether_1_1_widget_plugin}\index{noether::WidgetPlugin$<$ T $>$@{noether::WidgetPlugin$<$ T $>$}}
+
+
+Base class for a plugin that can generate a Qt widget.  
+
+
+
+
+{\ttfamily \#include $<$plugin\+\_\+interface.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Widget\+Plugin$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnoether_1_1_widget_plugin__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_widget_plugin_a296baa779f86c144179b591f253dc629}\label{classnoether_1_1_widget_plugin_a296baa779f86c144179b591f253dc629}} 
+using {\bfseries WidgetT} = T
+\item 
+\mbox{\Hypertarget{classnoether_1_1_widget_plugin_af34b4a2a9008c45a25b52efdba88e4bd}\label{classnoether_1_1_widget_plugin_af34b4a2a9008c45a25b52efdba88e4bd}} 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnoether_1_1_widget_plugin}{Widget\+Plugin}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_widget_plugin_ab92700b1fc45ee3e33090faa905ad892}\label{classnoether_1_1_widget_plugin_ab92700b1fc45ee3e33090faa905ad892}} 
+virtual Q\+Widget $\ast$ {\bfseries create} (Q\+Widget $\ast$parent=nullptr, const Y\+A\+M\+L\+::\+Node \&config=\{\}) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_widget_plugin_a5626c89e1aaf02825a13cea4df21fb04}\label{classnoether_1_1_widget_plugin_a5626c89e1aaf02825a13cea4df21fb04}} 
+class {\bfseries boost\+\_\+plugin\+\_\+loader\+::\+Plugin\+Loader}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_widget_plugin_a36e88069c7a461b6b43e9582215ddd97}\label{classnoether_1_1_widget_plugin_a36e88069c7a461b6b43e9582215ddd97}} 
+struct {\bfseries boost\+\_\+plugin\+\_\+loader\+::has\+\_\+get\+Section$<$ Widget\+Plugin $>$}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class noether\+::\+Widget\+Plugin$<$ T $>$}
+
+Base class for a plugin that can generate a Qt widget. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+gui/include/noether\+\_\+gui/plugin\+\_\+interface.\+h\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+gui/src/plugin\+\_\+interface.\+cpp\end{DoxyCompactItemize}

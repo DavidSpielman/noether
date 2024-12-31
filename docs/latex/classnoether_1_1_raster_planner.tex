@@ -1,0 +1,105 @@
+\hypertarget{classnoether_1_1_raster_planner}{}\doxysection{noether\+::Raster\+Planner Class Reference}
+\label{classnoether_1_1_raster_planner}\index{noether::RasterPlanner@{noether::RasterPlanner}}
+
+
+A specification of the tool path planner for covering surfaces in repeating, evenly spaced path lines. By default, a raster planner will produce a path with all points having a consistent orientation, lines which all travel in the same direction across the surface, and the traversal between lines will be in a consistent direction and order.  
+
+
+
+
+{\ttfamily \#include $<$raster\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Raster\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classnoether_1_1_raster_planner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Raster\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classnoether_1_1_raster_planner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_aab1b856f3bb9218e43223691e134e3d9}\label{classnoether_1_1_raster_planner_aab1b856f3bb9218e43223691e134e3d9}} 
+{\bfseries Raster\+Planner} (Direction\+Generator\+::\+Const\+Ptr dir\+\_\+gen, Origin\+Generator\+::\+Const\+Ptr origin\+\_\+gen)
+\item 
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_afc67babbd8c9dc6944d957c6aaa2b654}\label{classnoether_1_1_raster_planner_afc67babbd8c9dc6944d957c6aaa2b654}} 
+\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} {\bfseries plan} (const pcl\+::\+Polygon\+Mesh \&mesh) const override final
+\item 
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_a88e957544564a7adab27764b1d612abf}\label{classnoether_1_1_raster_planner_a88e957544564a7adab27764b1d612abf}} 
+void {\bfseries set\+Point\+Spacing} (const double point\+\_\+spacing)
+\item 
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_a6dcff03b217d68510af2ca7ebff298e0}\label{classnoether_1_1_raster_planner_a6dcff03b217d68510af2ca7ebff298e0}} 
+void {\bfseries set\+Line\+Spacing} (const double line\+\_\+spacing)
+\item 
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_ac48be9264ac3d7bee27c427216b2d08e}\label{classnoether_1_1_raster_planner_ac48be9264ac3d7bee27c427216b2d08e}} 
+void {\bfseries set\+Min\+Hole\+Size} (const double min\+\_\+hole\+\_\+size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} \mbox{\hyperlink{classnoether_1_1_raster_planner_a7f6c2e879db5752afb5e206eb9793f98}{plan\+Impl}} (const pcl\+::\+Polygon\+Mesh \&mesh) const =0
+\begin{DoxyCompactList}\small\item\em Implementation of the tool path planning capability. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_a5b043ef8cb21f319536a5e6c5249e13c}\label{classnoether_1_1_raster_planner_a5b043ef8cb21f319536a5e6c5249e13c}} 
+Direction\+Generator\+::\+Const\+Ptr {\bfseries dir\+\_\+gen\+\_\+}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_ae5411c9330b35f080d7447a32cf404ed}\label{classnoether_1_1_raster_planner_ae5411c9330b35f080d7447a32cf404ed}} 
+Origin\+Generator\+::\+Const\+Ptr {\bfseries origin\+\_\+gen\+\_\+}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_a13bf7afc2d115f7646a2288bdc2a0e4e}\label{classnoether_1_1_raster_planner_a13bf7afc2d115f7646a2288bdc2a0e4e}} 
+double \mbox{\hyperlink{classnoether_1_1_raster_planner_a13bf7afc2d115f7646a2288bdc2a0e4e}{point\+\_\+spacing\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Distance between waypoints on the same raster line (m) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_aad148ec9151e9f1eaa38a0b4c0dc7b4c}\label{classnoether_1_1_raster_planner_aad148ec9151e9f1eaa38a0b4c0dc7b4c}} 
+double \mbox{\hyperlink{classnoether_1_1_raster_planner_aad148ec9151e9f1eaa38a0b4c0dc7b4c}{line\+\_\+spacing\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Distance between raster lines. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_abeb7fa72186fba15c5df2aadd78ab2f0}\label{classnoether_1_1_raster_planner_abeb7fa72186fba15c5df2aadd78ab2f0}} 
+double \mbox{\hyperlink{classnoether_1_1_raster_planner_abeb7fa72186fba15c5df2aadd78ab2f0}{min\+\_\+hole\+\_\+size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Minimum size of hole in a mesh for which the planner should split a raster line that crosses over the hole into multiple segments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A specification of the tool path planner for covering surfaces in repeating, evenly spaced path lines. By default, a raster planner will produce a path with all points having a consistent orientation, lines which all travel in the same direction across the surface, and the traversal between lines will be in a consistent direction and order. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnoether_1_1_raster_planner_a7f6c2e879db5752afb5e206eb9793f98}\label{classnoether_1_1_raster_planner_a7f6c2e879db5752afb5e206eb9793f98}} 
+\index{noether::RasterPlanner@{noether::RasterPlanner}!planImpl@{planImpl}}
+\index{planImpl@{planImpl}!noether::RasterPlanner@{noether::RasterPlanner}}
+\doxysubsubsection{\texorpdfstring{planImpl()}{planImpl()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} noether\+::\+Raster\+Planner\+::plan\+Impl (\begin{DoxyParamCaption}\item[{const pcl\+::\+Polygon\+Mesh \&}]{mesh }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implementation of the tool path planning capability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classnoether_1_1_plane_slicer_raster_planner_ae77bdca187091c4d163f677a8b09155a}{noether\+::\+Plane\+Slicer\+Raster\+Planner}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/include/noether\+\_\+tpp/tool\+\_\+path\+\_\+planners/raster/\mbox{\hyperlink{raster__planner_8h}{raster\+\_\+planner.\+h}}\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/src/tool\+\_\+path\+\_\+planners/raster/raster\+\_\+planner.\+cpp\end{DoxyCompactItemize}

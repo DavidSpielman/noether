@@ -1,0 +1,5 @@
+<map id="noether::ConcatenateModifier" name="noether::ConcatenateModifier">
+<area shape="rect" id="node1" title="Concatenates all input tool paths into a single tool path." alt="" coords="5,169,221,196"/>
+<area shape="rect" id="node2" href="$structnoether_1_1OneTimeToolPathModifier.html" title="An extension of the ToolPathModifier interface that requires a modifier to not cause additional chang..." alt="" coords="17,80,210,121"/>
+<area shape="rect" id="node3" href="$structnoether_1_1ToolPathModifier.html" title="A common interface for functions that alter a generated toolpath." alt="" coords="19,5,208,32"/>
+</map>

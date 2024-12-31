@@ -1,0 +1,5 @@
+<map id="noether::ExtrudedPolygonSubsetExtractor" name="noether::ExtrudedPolygonSubsetExtractor">
+<area shape="rect" id="node1" title="Extracts the submesh with the vertices captured inside an extruded polygon defined by the input bound..." alt="" coords="107,109,297,151"/>
+<area shape="rect" id="node2" href="$structnoether_1_1_subset_extractor.html" title="Base class for extracting a point cloud subset from an input given a set of boundary points." alt="" coords="5,13,188,39"/>
+<area shape="rect" id="node3" href="$structnoether_1_1_extruded_polygon_subset_extractor_1_1_params.html" title=" " alt="" coords="212,5,403,47"/>
+</map>

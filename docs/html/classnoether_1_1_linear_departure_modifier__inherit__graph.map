@@ -1,0 +1,5 @@
+<map id="noether::LinearDepartureModifier" name="noether::LinearDepartureModifier">
+<area shape="rect" id="node1" title="Adds a series of waypoints in a linear pattern off the last waypoint in a tool path." alt="" coords="30,155,215,196"/>
+<area shape="rect" id="node2" href="$classnoether_1_1_linear_approach_modifier.html" title="Adds a series of waypoints in a linear pattern off the first waypoint in a tool path." alt="" coords="5,80,240,107"/>
+<area shape="rect" id="node3" href="$structnoether_1_1_tool_path_modifier.html" title="A common interface for functions that alter a generated toolpath." alt="" coords="28,5,217,32"/>
+</map>

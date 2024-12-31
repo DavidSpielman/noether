@@ -1,0 +1,39 @@
+\hypertarget{structnoether_1_1OriginGenerator}{}\doxysection{noether\+::Origin\+Generator Struct Reference}
+\label{structnoether_1_1OriginGenerator}\index{noether::OriginGenerator@{noether::OriginGenerator}}
+
+
+Interface for setting the start point from which to generate toolpaths.  
+
+
+
+
+{\ttfamily \#include $<$raster\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Origin\+Generator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structnoether_1_1OriginGenerator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1OriginGenerator_aa89675836ae05a1ccf27039000de813d}\label{structnoether_1_1OriginGenerator_aa89675836ae05a1ccf27039000de813d}} 
+using {\bfseries Ptr} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structnoether_1_1OriginGenerator}{Origin\+Generator}} $>$
+\item 
+\mbox{\Hypertarget{structnoether_1_1OriginGenerator_af154ba676994968f9d53bd5507f1c3ac}\label{structnoether_1_1OriginGenerator_af154ba676994968f9d53bd5507f1c3ac}} 
+using {\bfseries Const\+Ptr} = std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{structnoether_1_1OriginGenerator}{Origin\+Generator}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1OriginGenerator_a9620da1c80cf43b4c95f3e1714e08a42}\label{structnoether_1_1OriginGenerator_a9620da1c80cf43b4c95f3e1714e08a42}} 
+virtual Eigen\+::\+Vector3d {\bfseries generate} (const pcl\+::\+Polygon\+Mesh \&mesh) const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for setting the start point from which to generate toolpaths. 

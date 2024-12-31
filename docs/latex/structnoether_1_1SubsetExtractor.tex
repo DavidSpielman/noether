@@ -1,0 +1,55 @@
+\hypertarget{structnoether_1_1SubsetExtractor}{}\doxysection{noether\+::Subset\+Extractor Struct Reference}
+\label{structnoether_1_1SubsetExtractor}\index{noether::SubsetExtractor@{noether::SubsetExtractor}}
+
+
+Base class for extracting a point cloud subset from an input given a set of boundary points.  
+
+
+
+
+{\ttfamily \#include $<$subset\+\_\+extractor.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Subset\+Extractor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{structnoether_1_1SubsetExtractor__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::vector$<$ int $>$ \mbox{\hyperlink{structnoether_1_1SubsetExtractor_ab8e1d4d988c39a32d805253e096cbdbd}{extract}} (const pcl\+::\+P\+C\+L\+Point\+Cloud2 \&cloud, const Eigen\+::\+Matrix\+X3d \&boundary) const =0
+\begin{DoxyCompactList}\small\item\em Extracts the inlying subset of points from a cloud given a set of boundary points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for extracting a point cloud subset from an input given a set of boundary points. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnoether_1_1SubsetExtractor_ab8e1d4d988c39a32d805253e096cbdbd}\label{structnoether_1_1SubsetExtractor_ab8e1d4d988c39a32d805253e096cbdbd}} 
+\index{noether::SubsetExtractor@{noether::SubsetExtractor}!extract@{extract}}
+\index{extract@{extract}!noether::SubsetExtractor@{noether::SubsetExtractor}}
+\doxysubsubsection{\texorpdfstring{extract()}{extract()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$int$>$ noether\+::\+Subset\+Extractor\+::extract (\begin{DoxyParamCaption}\item[{const pcl\+::\+P\+C\+L\+Point\+Cloud2 \&}]{cloud,  }\item[{const Eigen\+::\+Matrix\+X3d \&}]{boundary }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Extracts the inlying subset of points from a cloud given a set of boundary points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cloud} & \\
+\hline
+{\em boundary} & -\/ ordered 3D points (row-\/wise) defining a closed boundary polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{structnoether_1_1ExtrudedPolygonSubsetExtractor_a43adec9c418039e189976b3ab2ae2251}{noether\+::\+Extruded\+Polygon\+Subset\+Extractor}}.
+

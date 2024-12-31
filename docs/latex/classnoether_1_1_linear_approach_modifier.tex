@@ -1,0 +1,74 @@
+\hypertarget{classnoether_1_1_linear_approach_modifier}{}\doxysection{noether\+::Linear\+Approach\+Modifier Class Reference}
+\label{classnoether_1_1_linear_approach_modifier}\index{noether::LinearApproachModifier@{noether::LinearApproachModifier}}
+
+
+Adds a series of waypoints in a linear pattern off the first waypoint in a tool path.  
+
+
+
+
+{\ttfamily \#include $<$linear\+\_\+approach\+\_\+modifier.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Linear\+Approach\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classnoether_1_1_linear_approach_modifier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Linear\+Approach\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classnoether_1_1_linear_approach_modifier__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_linear_approach_modifier_a2f520b902ccd915f810f004097526cbb}\label{classnoether_1_1_linear_approach_modifier_a2f520b902ccd915f810f004097526cbb}} 
+enum {\bfseries Axis} \{ {\bfseries X}, 
+{\bfseries Y}, 
+{\bfseries Z}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_linear_approach_modifier_ad17cbb395fa22a6af058ce7b5589ea08}\label{classnoether_1_1_linear_approach_modifier_ad17cbb395fa22a6af058ce7b5589ea08}} 
+{\bfseries Linear\+Approach\+Modifier} (Eigen\+::\+Vector3d offset, std\+::size\+\_\+t n\+\_\+points)
+\item 
+\mbox{\Hypertarget{classnoether_1_1_linear_approach_modifier_a2cd3ddaa86a20f6d9935ecb3452f3156}\label{classnoether_1_1_linear_approach_modifier_a2cd3ddaa86a20f6d9935ecb3452f3156}} 
+{\bfseries Linear\+Approach\+Modifier} (double offset\+\_\+height, Axis axis, std\+::size\+\_\+t n\+\_\+points)
+\item 
+\mbox{\Hypertarget{classnoether_1_1_linear_approach_modifier_af5839952e1b41016d18f27680dc8fb59}\label{classnoether_1_1_linear_approach_modifier_af5839952e1b41016d18f27680dc8fb59}} 
+\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} {\bfseries modify} (\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} tool\+\_\+paths) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_linear_approach_modifier_a1900f56f77d49418dc440692eead3c3c}\label{classnoether_1_1_linear_approach_modifier_a1900f56f77d49418dc440692eead3c3c}} 
+static Eigen\+::\+Vector3d {\bfseries to\+Vector} (double offset, Axis axis)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_linear_approach_modifier_aac078f9d7d3784eb89a2f9f99843779f}\label{classnoether_1_1_linear_approach_modifier_aac078f9d7d3784eb89a2f9f99843779f}} 
+Eigen\+::\+Vector3d {\bfseries offset\+\_\+}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_linear_approach_modifier_a33c9c16c3bfe2d2e8a43f0ec4fa0adf7}\label{classnoether_1_1_linear_approach_modifier_a33c9c16c3bfe2d2e8a43f0ec4fa0adf7}} 
+const size\+\_\+t {\bfseries n\+\_\+points\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Adds a series of waypoints in a linear pattern off the first waypoint in a tool path. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/include/noether\+\_\+tpp/tool\+\_\+path\+\_\+modifiers/linear\+\_\+approach\+\_\+modifier.\+h\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/src/tool\+\_\+path\+\_\+modifiers/linear\+\_\+approach\+\_\+modifier.\+cpp\end{DoxyCompactItemize}

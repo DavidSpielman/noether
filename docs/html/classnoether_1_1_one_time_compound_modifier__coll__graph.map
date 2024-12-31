@@ -1,0 +1,5 @@
+<map id="noether::OneTimeCompoundModifier" name="noether::OneTimeCompoundModifier">
+<area shape="rect" id="node1" title="Modifier that chains together one&#45;time style modifiers." alt="" coords="5,169,213,211"/>
+<area shape="rect" id="node2" href="$structnoether_1_1_one_time_tool_path_modifier.html" title="An extension of the ToolPathModifier interface that requires a modifier to not cause additional chang..." alt="" coords="13,80,206,121"/>
+<area shape="rect" id="node3" href="$structnoether_1_1_tool_path_modifier.html" title="A common interface for functions that alter a generated toolpath." alt="" coords="15,5,204,32"/>
+</map>

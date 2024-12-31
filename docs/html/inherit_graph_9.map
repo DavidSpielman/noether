@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$structnoether_1_1OriginGenerator.html" title="Interface for setting the start point from which to generate toolpaths." alt="" coords="5,97,189,123"/>
+<area shape="rect" id="node2" href="$structnoether_1_1AABBCenterOriginGenerator.html" title="Returns the center of the axis&#45;aligned bounding box (AABB) as the origin." alt="" coords="257,5,456,47"/>
+<area shape="rect" id="node3" href="$structnoether_1_1CentroidOriginGenerator.html" title="Returns the centroid of the mesh vertices as the origin." alt="" coords="237,71,476,98"/>
+<area shape="rect" id="node4" href="$classnoether_1_1FixedOriginGenerator.html" title="Returns a fixed point as the origin." alt="" coords="247,122,466,149"/>
+<area shape="rect" id="node5" href="$classnoether_1_1OffsetOriginGenerator.html" title="Returns the origin as the origin of another specified origin generator plus a fixed offset." alt="" coords="245,173,469,199"/>
+</map>

@@ -1,0 +1,38 @@
+\hypertarget{md__home_D10_8US_8SWRI_8ORG_dspielman_workspaces_blending_m5_swri_ws_target_ws_src_noether_noether_tpp_README_autotoc_md3}{}\doxysection{Architecture}\label{md__home_D10_8US_8SWRI_8ORG_dspielman_workspaces_blending_m5_swri_ws_target_ws_src_noether_noether_tpp_README_autotoc_md3}
+\hypertarget{md__home_D10_8US_8SWRI_8ORG_dspielman_workspaces_blending_m5_swri_ws_target_ws_src_noether_noether_tpp_README_autotoc_md4}{}\doxysection{Key Concepts, Interfaces, and Requirements}\label{md__home_D10_8US_8SWRI_8ORG_dspielman_workspaces_blending_m5_swri_ws_target_ws_src_noether_noether_tpp_README_autotoc_md4}
+By describing the definition of raster plans, edge plans, and plan modifiers, we also create functional guidelines for what a Raster\+Planner, Edge\+Planner, and Plan\+Modifier should do when implemented. These requirements should form the basis of the unit tests for each of these classes.\hypertarget{md__home_D10_8US_8SWRI_8ORG_dspielman_workspaces_blending_m5_swri_ws_target_ws_src_noether_noether_tpp_README_autotoc_md5}{}\doxysubsection{Raster Plans}\label{md__home_D10_8US_8SWRI_8ORG_dspielman_workspaces_blending_m5_swri_ws_target_ws_src_noether_noether_tpp_README_autotoc_md5}
+
+
+
+\begin{DoxyItemize}
+\item Generally $>$1 raster
+\item Generally covers the whole supplied surface
+\item Lines are parallel
+\item Repeating pattern of lines
+\item All points lie on surface
+\item All points have same orientation
+\item Waypoints in rasters are consistently and spatially ordered
+\item Segments are consistently and spatially ordered in Tool\+Path
+\item Tool\+Paths are in order in top-\/level structure
+\end{DoxyItemize}\hypertarget{md__home_D10_8US_8SWRI_8ORG_dspielman_workspaces_blending_m5_swri_ws_target_ws_src_noether_noether_tpp_README_autotoc_md6}{}\doxysubsection{Edge Plans}\label{md__home_D10_8US_8SWRI_8ORG_dspielman_workspaces_blending_m5_swri_ws_target_ws_src_noether_noether_tpp_README_autotoc_md6}
+
+
+
+\begin{DoxyItemize}
+\item A list of closed-\/loop edges around parts
+\item Segments in sequential order in Tool\+Path
+\item Tool\+Paths ordered by length of closed loop, with longest first
+\item All loops start near some point (e.\+g. all in top left corner)
+\item All loops process in same direction
+\end{DoxyItemize}\hypertarget{md__home_D10_8US_8SWRI_8ORG_dspielman_workspaces_blending_m5_swri_ws_target_ws_src_noether_noether_tpp_README_autotoc_md7}{}\doxysubsection{Plan Modifier}\label{md__home_D10_8US_8SWRI_8ORG_dspielman_workspaces_blending_m5_swri_ws_target_ws_src_noether_noether_tpp_README_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Takes in the output type of a tool path planner (i.\+e. Tool\+Paths)
+\item Outputs the output type of a tool path planner (i.\+e. Tool\+Paths)
+\item There should be a strong preference for constructing modifiers that have no additional effect when run repeatedly. Since some modifications (such as adding an extra raster) will not meet this requirement, it will only apply to a specialized subclass, One\+Time\+Modifier.
+\begin{DoxyItemize}
+\item As an example\+: While a Plan\+Modifier could be implemented via a function that reverses the direction of odd-\/indexed rasters, running that function twice would undo the desired changes. Instead, a more desirable Plan\+Modifier might set the direction of every even-\/indexed raster to the direction of the zero-\/indexed raster, and set the direction of every odd-\/indexed raster to the opposite. This would result in no additional change if run multiple times.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+ 

@@ -1,0 +1,10 @@
+<map id="noether::OneTimeToolPathModifier" name="noether::OneTimeToolPathModifier">
+<area shape="rect" id="node1" title="An extension of the ToolPathModifier interface that requires a modifier to not cause additional chang..." alt="" coords="243,155,436,197"/>
+<area shape="rect" id="node3" href="$structnoether_1_1ConcatenateModifier.html" title="Concatenates all input tool paths into a single tool path." alt="" coords="484,5,700,32"/>
+<area shape="rect" id="node4" href="$structnoether_1_1DirectionOfTravelOrientationModifier.html" title="Aligns the x&#45;axis of all waypoints with the direction of travel between adjacent waypoints." alt="" coords="495,57,689,98"/>
+<area shape="rect" id="node5" href="$classnoether_1_1FixedOrientationModifier.html" title="Aligns the orientation of each waypoint with the existing waypoint normal (z&#45;axis) and the specified ..." alt="" coords="499,122,685,163"/>
+<area shape="rect" id="node6" href="$classnoether_1_1OneTimeCompoundModifier.html" title="Modifier that chains together one&#45;time style modifiers." alt="" coords="488,187,696,229"/>
+<area shape="rect" id="node7" href="$classnoether_1_1StandardEdgePathsOrganizationModifier.html" title="Organizes a set of tool paths into a standard configuration for edge paths." alt="" coords="489,253,695,294"/>
+<area shape="rect" id="node8" href="$structnoether_1_1UniformOrientationModifier.html" title="Aligns the x&#45;axis of all waypoints with the direction of travel of the first two waypoints." alt="" coords="489,318,695,359"/>
+<area shape="rect" id="node2" href="$structnoether_1_1ToolPathModifier.html" title="A common interface for functions that alter a generated toolpath." alt="" coords="5,163,195,189"/>
+</map>

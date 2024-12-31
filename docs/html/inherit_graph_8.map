@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$structnoether_1_1MeshModifier.html" title="A common interface for mesh modifications." alt="" coords="5,224,175,251"/>
+<area shape="rect" id="node2" href="$classnoether_1_1BSplineReconstruction.html" title=" " alt="" coords="232,5,459,32"/>
+<area shape="rect" id="node3" href="$classnoether_1_1CleanData.html" title=" " alt="" coords="271,56,419,83"/>
+<area shape="rect" id="node4" href="$classnoether_1_1CompoundMeshModifier.html" title=" " alt="" coords="226,107,465,133"/>
+<area shape="rect" id="node5" href="$classnoether_1_1EuclideanClusteringMeshModifier.html" title=" " alt="" coords="241,158,450,199"/>
+<area shape="rect" id="node6" href="$classnoether_1_1FillHoles.html" title=" " alt="" coords="278,224,413,251"/>
+<area shape="rect" id="node7" href="$classnoether_1_1NormalEstimationPCLMeshModifier.html" title=" " alt="" coords="246,275,445,317"/>
+<area shape="rect" id="node8" href="$classnoether_1_1NormalsFromMeshFacesMeshModifier.html" title=" " alt="" coords="244,341,447,382"/>
+<area shape="rect" id="node9" href="$classnoether_1_1PlaneProjectionMeshModifier.html" title=" " alt="" coords="255,406,436,447"/>
+<area shape="rect" id="node10" href="$classnoether_1_1WindowedSincSmoothing.html" title=" " alt="" coords="223,472,468,499"/>
+</map>

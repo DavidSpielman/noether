@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$structnoether_1_1SubsetExtractor.html" title="Base class for extracting a point cloud subset from an input given a set of boundary points." alt="" coords="5,13,188,39"/>
+<area shape="rect" id="node2" href="$structnoether_1_1ExtrudedPolygonSubsetExtractor.html" title="Extracts the submesh with the vertices captured inside an extruded polygon defined by the input bound..." alt="" coords="236,5,427,47"/>
+</map>

@@ -1,0 +1,55 @@
+\hypertarget{structnoether_1_1SubMeshExtractor}{}\doxysection{noether\+::Sub\+Mesh\+Extractor Struct Reference}
+\label{structnoether_1_1SubMeshExtractor}\index{noether::SubMeshExtractor@{noether::SubMeshExtractor}}
+
+
+Base class for extracting a submesh from a mesh given a set of boundary points.  
+
+
+
+
+{\ttfamily \#include $<$subset\+\_\+extractor.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Sub\+Mesh\+Extractor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{structnoether_1_1SubMeshExtractor__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual pcl\+::\+Polygon\+Mesh \mbox{\hyperlink{structnoether_1_1SubMeshExtractor_aff70cdd96805edf7504517252122ec1a}{extract}} (const pcl\+::\+Polygon\+Mesh \&mesh, const Eigen\+::\+Matrix\+X3d \&boundary) const =0
+\begin{DoxyCompactList}\small\item\em Extracts a submesh from a mesh given a set of boundary points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for extracting a submesh from a mesh given a set of boundary points. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnoether_1_1SubMeshExtractor_aff70cdd96805edf7504517252122ec1a}\label{structnoether_1_1SubMeshExtractor_aff70cdd96805edf7504517252122ec1a}} 
+\index{noether::SubMeshExtractor@{noether::SubMeshExtractor}!extract@{extract}}
+\index{extract@{extract}!noether::SubMeshExtractor@{noether::SubMeshExtractor}}
+\doxysubsubsection{\texorpdfstring{extract()}{extract()}}
+{\footnotesize\ttfamily virtual pcl\+::\+Polygon\+Mesh noether\+::\+Sub\+Mesh\+Extractor\+::extract (\begin{DoxyParamCaption}\item[{const pcl\+::\+Polygon\+Mesh \&}]{mesh,  }\item[{const Eigen\+::\+Matrix\+X3d \&}]{boundary }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Extracts a submesh from a mesh given a set of boundary points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+{\em boundary} & -\/ ordered 3D points (row-\/wise) defining a closed boundary polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{structnoether_1_1ExtrudedPolygonSubMeshExtractor_adb43b3eeff25066148e01059158c445c}{noether\+::\+Extruded\+Polygon\+Sub\+Mesh\+Extractor}}.
+

@@ -1,0 +1,4 @@
+<map id="noether::OffsetModifier" name="noether::OffsetModifier">
+<area shape="rect" id="node1" title="Offsets the tool path by a fixed pose." alt="" coords="13,80,187,107"/>
+<area shape="rect" id="node2" href="$structnoether_1_1_tool_path_modifier.html" title="A common interface for functions that alter a generated toolpath." alt="" coords="5,5,195,32"/>
+</map>

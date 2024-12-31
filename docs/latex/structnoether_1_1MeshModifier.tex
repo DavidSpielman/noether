@@ -1,0 +1,41 @@
+\hypertarget{structnoether_1_1MeshModifier}{}\doxysection{noether\+::Mesh\+Modifier Struct Reference}
+\label{structnoether_1_1MeshModifier}\index{noether::MeshModifier@{noether::MeshModifier}}
+
+
+A common interface for mesh modifications.  
+
+
+
+
+{\ttfamily \#include $<$mesh\+\_\+modifier.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Mesh\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structnoether_1_1MeshModifier__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1MeshModifier_a4c3bada42cc5e8a6e8d1fe99e96c6f0f}\label{structnoether_1_1MeshModifier_a4c3bada42cc5e8a6e8d1fe99e96c6f0f}} 
+using {\bfseries Ptr} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structnoether_1_1MeshModifier}{Mesh\+Modifier}} $>$
+\item 
+\mbox{\Hypertarget{structnoether_1_1MeshModifier_a46f912e6224b08d499cb67b4e555a888}\label{structnoether_1_1MeshModifier_a46f912e6224b08d499cb67b4e555a888}} 
+using {\bfseries Const\+Ptr} = std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{structnoether_1_1MeshModifier}{Mesh\+Modifier}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1MeshModifier_ad508c25dbacd356869ced5800f02266a}\label{structnoether_1_1MeshModifier_ad508c25dbacd356869ced5800f02266a}} 
+virtual std\+::vector$<$ pcl\+::\+Polygon\+Mesh $>$ {\bfseries modify} (const pcl\+::\+Polygon\+Mesh \&mesh) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A common interface for mesh modifications. 
+
+Since some modifications, such as segmentation, output multiple meshes, the function returns a list of meshes. Since the return value is a list, this interface (unlike the tool path modifier) takes the input by reference. The default behavior simply returns the input mesh. 

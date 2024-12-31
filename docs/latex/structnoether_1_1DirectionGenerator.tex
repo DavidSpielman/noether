@@ -1,0 +1,41 @@
+\hypertarget{structnoether_1_1DirectionGenerator}{}\doxysection{noether\+::Direction\+Generator Struct Reference}
+\label{structnoether_1_1DirectionGenerator}\index{noether::DirectionGenerator@{noether::DirectionGenerator}}
+
+
+Interface for generating the direction of raster paths. This direction represents the line along which waypoints in a raster path will lie.  
+
+
+
+
+{\ttfamily \#include $<$raster\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Direction\+Generator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structnoether_1_1DirectionGenerator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1DirectionGenerator_a9917c5b36439f39101d1957c0bb3ef96}\label{structnoether_1_1DirectionGenerator_a9917c5b36439f39101d1957c0bb3ef96}} 
+using {\bfseries Ptr} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structnoether_1_1DirectionGenerator}{Direction\+Generator}} $>$
+\item 
+\mbox{\Hypertarget{structnoether_1_1DirectionGenerator_a99ebe9f3e8118b2cd1f46d7d69869668}\label{structnoether_1_1DirectionGenerator_a99ebe9f3e8118b2cd1f46d7d69869668}} 
+using {\bfseries Const\+Ptr} = std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{structnoether_1_1DirectionGenerator}{Direction\+Generator}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1DirectionGenerator_a63d1359f765c3d41f42fcc71150a4e79}\label{structnoether_1_1DirectionGenerator_a63d1359f765c3d41f42fcc71150a4e79}} 
+virtual Eigen\+::\+Vector3d {\bfseries generate} (const pcl\+::\+Polygon\+Mesh \&mesh) const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for generating the direction of raster paths. This direction represents the line along which waypoints in a raster path will lie. 
+
+This interface only defines the raster path direction. It is overconstrained to also define the raster step direction, which is typically normal to the raster path direction. As such, we leave it up to the individual raster planners to determine how propagate sequential rasters normal to the path direction. 

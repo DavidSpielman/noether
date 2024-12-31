@@ -1,0 +1,5 @@
+<map id="noether::UniformOrientationModifier" name="noether::UniformOrientationModifier">
+<area shape="rect" id="node1" title="Aligns the x&#45;axis of all waypoints with the direction of travel of the first two waypoints." alt="" coords="5,169,212,211"/>
+<area shape="rect" id="node2" href="$structnoether_1_1_one_time_tool_path_modifier.html" title="An extension of the ToolPathModifier interface that requires a modifier to not cause additional chang..." alt="" coords="12,80,205,121"/>
+<area shape="rect" id="node3" href="$structnoether_1_1_tool_path_modifier.html" title="A common interface for functions that alter a generated toolpath." alt="" coords="14,5,203,32"/>
+</map>

@@ -1,0 +1,42 @@
+\hypertarget{structnoether_1_1UniformOrientationModifier}{}\doxysection{noether\+::Uniform\+Orientation\+Modifier Struct Reference}
+\label{structnoether_1_1UniformOrientationModifier}\index{noether::UniformOrientationModifier@{noether::UniformOrientationModifier}}
+
+
+Aligns the x-\/axis of all waypoints with the direction of travel of the first two waypoints.  
+
+
+
+
+{\ttfamily \#include $<$uniform\+\_\+orientation\+\_\+modifier.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::Uniform\+Orientation\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{structnoether_1_1UniformOrientationModifier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::Uniform\+Orientation\+Modifier\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{structnoether_1_1UniformOrientationModifier__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnoether_1_1UniformOrientationModifier_a2805d1f8efc43f3e1d1b4d34e726aac2}\label{structnoether_1_1UniformOrientationModifier_a2805d1f8efc43f3e1d1b4d34e726aac2}} 
+\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} {\bfseries modify} (\mbox{\hyperlink{types_8h_a6fab5220e21ae1fff3c7ee5ba73f7fdd}{Tool\+Paths}} tool\+\_\+paths) const override final
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Aligns the x-\/axis of all waypoints with the direction of travel of the first two waypoints. 
+
+Re-\/alignment of the waypoint orientation only occurs if the dot product of the waypoint x-\/axis and the reference direction of travel is less than zero. In the case of an orientation change, the waypoint is simply rotated about its z-\/axis by 180 degrees 

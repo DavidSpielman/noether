@@ -1,0 +1,71 @@
+\hypertarget{classnoether_1_1_p_c_a_rotated_direction_generator}{}\doxysection{noether\+::P\+C\+A\+Rotated\+Direction\+Generator Class Reference}
+\label{classnoether_1_1_p_c_a_rotated_direction_generator}\index{noether::PCARotatedDirectionGenerator@{noether::PCARotatedDirectionGenerator}}
+
+
+Rotates a direction vector provided by another direction generator about the smallest principal axis of the input mesh.  
+
+
+
+
+{\ttfamily \#include $<$pca\+\_\+rotated\+\_\+direction\+\_\+generator.\+h$>$}
+
+
+
+Inheritance diagram for noether\+::P\+C\+A\+Rotated\+Direction\+Generator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classnoether_1_1_p_c_a_rotated_direction_generator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for noether\+::P\+C\+A\+Rotated\+Direction\+Generator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classnoether_1_1_p_c_a_rotated_direction_generator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_p_c_a_rotated_direction_generator_aee9cd46152707ebfdd80e87fc90108b4}\label{classnoether_1_1_p_c_a_rotated_direction_generator_aee9cd46152707ebfdd80e87fc90108b4}} 
+{\bfseries P\+C\+A\+Rotated\+Direction\+Generator} (const \mbox{\hyperlink{classnoether_1_1_p_c_a_rotated_direction_generator}{P\+C\+A\+Rotated\+Direction\+Generator}} \&)=delete
+\item 
+\mbox{\Hypertarget{classnoether_1_1_p_c_a_rotated_direction_generator_a8d43e17d8161c4d0ddea0fe386536bb9}\label{classnoether_1_1_p_c_a_rotated_direction_generator_a8d43e17d8161c4d0ddea0fe386536bb9}} 
+{\bfseries P\+C\+A\+Rotated\+Direction\+Generator} (\mbox{\hyperlink{classnoether_1_1_p_c_a_rotated_direction_generator}{P\+C\+A\+Rotated\+Direction\+Generator}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classnoether_1_1_p_c_a_rotated_direction_generator_adc557f839cfd98e20c8d5d53c537f326}\label{classnoether_1_1_p_c_a_rotated_direction_generator_adc557f839cfd98e20c8d5d53c537f326}} 
+\mbox{\hyperlink{classnoether_1_1_p_c_a_rotated_direction_generator}{P\+C\+A\+Rotated\+Direction\+Generator}} \& {\bfseries operator=} (const \mbox{\hyperlink{classnoether_1_1_p_c_a_rotated_direction_generator}{P\+C\+A\+Rotated\+Direction\+Generator}} \&)=delete
+\item 
+\mbox{\Hypertarget{classnoether_1_1_p_c_a_rotated_direction_generator_a1004233a54af32d83eeb0dc53bc5b2e1}\label{classnoether_1_1_p_c_a_rotated_direction_generator_a1004233a54af32d83eeb0dc53bc5b2e1}} 
+\mbox{\hyperlink{classnoether_1_1_p_c_a_rotated_direction_generator}{P\+C\+A\+Rotated\+Direction\+Generator}} \& {\bfseries operator=} (\mbox{\hyperlink{classnoether_1_1_p_c_a_rotated_direction_generator}{P\+C\+A\+Rotated\+Direction\+Generator}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classnoether_1_1_p_c_a_rotated_direction_generator_a7426de6264c3a53cd81fa1ee89650c07}\label{classnoether_1_1_p_c_a_rotated_direction_generator_a7426de6264c3a53cd81fa1ee89650c07}} 
+{\bfseries P\+C\+A\+Rotated\+Direction\+Generator} (Direction\+Generator\+::\+Const\+Ptr \&\&dir\+\_\+gen, double rotation\+\_\+angle)
+\item 
+\mbox{\Hypertarget{classnoether_1_1_p_c_a_rotated_direction_generator_a0457734d06fde95ba66a71227b42bb52}\label{classnoether_1_1_p_c_a_rotated_direction_generator_a0457734d06fde95ba66a71227b42bb52}} 
+Eigen\+::\+Vector3d {\bfseries generate} (const pcl\+::\+Polygon\+Mesh \&mesh) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_p_c_a_rotated_direction_generator_a7121e8c6612ac16a227e86c120e78680}\label{classnoether_1_1_p_c_a_rotated_direction_generator_a7121e8c6612ac16a227e86c120e78680}} 
+const Direction\+Generator\+::\+Const\+Ptr {\bfseries dir\+\_\+gen\+\_\+}
+\item 
+\mbox{\Hypertarget{classnoether_1_1_p_c_a_rotated_direction_generator_ae7147c4a9380e845e34caebf8fba43ea}\label{classnoether_1_1_p_c_a_rotated_direction_generator_ae7147c4a9380e845e34caebf8fba43ea}} 
+const double {\bfseries rotation\+\_\+angle\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Rotates a direction vector provided by another direction generator about the smallest principal axis of the input mesh. 
+
+One use for this class is for cross-\/hatch tool paths where the nominal direction is provided by a given direction generator, and this direction generator provides the rotated direction for the cross pattern 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/include/noether\+\_\+tpp/tool\+\_\+path\+\_\+planners/raster/direction\+\_\+generators/pca\+\_\+rotated\+\_\+direction\+\_\+generator.\+h\item 
+/home/\+D10.\+U\+S.\+S\+W\+R\+I.\+O\+R\+G/dspielman/workspaces/blending\+\_\+m5/swri\+\_\+ws/target\+\_\+ws/src/noether/noether\+\_\+tpp/src/tool\+\_\+path\+\_\+planners/raster/direction\+\_\+generators/pca\+\_\+rotated\+\_\+direction\+\_\+generator.\+cpp\end{DoxyCompactItemize}

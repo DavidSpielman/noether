@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$structnoether_1_1ToolPathPlanner.html" title="Interface for a tool path planner that operates on a mesh." alt="" coords="5,56,189,83"/>
+<area shape="rect" id="node2" href="$classnoether_1_1EdgePlanner.html" title="The EdgePlanner class &#45; A specification of the tool path planner interface for generating paths aroun..." alt="" coords="265,5,427,32"/>
+<area shape="rect" id="node4" href="$classnoether_1_1MultiToolPathPlanner.html" title="Runs multiple tool path planners serially and concatenates their outputs together." alt="" coords="237,56,455,83"/>
+<area shape="rect" id="node5" href="$classnoether_1_1RasterPlanner.html" title="A specification of the tool path planner for covering surfaces in repeating, evenly spaced path lines..." alt="" coords="261,107,431,133"/>
+<area shape="rect" id="node3" href="$classnoether_1_1BoundaryEdgePlanner.html" title="Edge tool path planner that creates paths around the boundary edges of a mesh (exterior and interior)..." alt="" coords="503,5,725,32"/>
+<area shape="rect" id="node6" href="$classnoether_1_1PlaneSlicerRasterPlanner.html" title="An implementation of the Raster Planner using a series of parallel cutting planes...." alt="" coords="517,99,711,141"/>
+</map>
