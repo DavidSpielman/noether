@@ -12,6 +12,7 @@
 
   <build_depend>ros_industrial_cmake_boilerplate</build_depend>
   <depend>boost_plugin_loader</depend>
+  <depend>libopen3d-dev</depend>
   <depend>libpcl-all-dev</depend>
   <depend>libvtk</depend>
   <depend>eigen</depend>

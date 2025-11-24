@@ -691,4 +691,75 @@ pcl::PolygonMesh createCylinderMeshWithUniformTriangles(const float radius,
   return createCylinderMesh(radius, length, resolution, vertical_resolution, theta_range, include_caps, origin);
 }
 
+open3d::geometry::TriangleMesh pclMeshToOpen3dTriangleMesh(const pcl::PolygonMesh& mesh)
+{
+  // Convert pcl::PolygonMesh cloud to open3d::geometry::Pointcloud
+  auto pcl_cloud = std::make_shared<pcl::PointCloud<pcl::PointNormal>>();
+  pcl::fromPCLPointCloud2(mesh.cloud, *pcl_cloud);
+  const open3d::geometry::PointCloud open3d_cloud = toOpen3D<pcl::PointNormal>(*pcl_cloud);
+
+          // Set the vertices of the open3d cloud
+  const std::vector<Eigen::Vector3d> vertices = open3d_cloud.points_;
+
+          // Set the triangles of the Open3d::TriangleMesh from the pcl::PolygonMesh
+  std::vector<Eigen::Vector3i> triangles;
+  triangles.reserve(mesh.polygons.size());
+
+  for (const auto& polygon : mesh.polygons)
+  {
+    const std::size_t num_verts = polygon.vertices.size();
+    for (std::size_t k = 2; k < num_verts; ++k)
+    {
+      if (k == 2)
+      {
+        const Eigen::Vector3i triangle{ polygon.vertices[0], polygon.vertices[1], polygon.vertices[2] };
+        triangles.push_back(triangle);
+      }
+      else
+      {
+        const Eigen::Vector3i triangle{ polygon.vertices[0], polygon.vertices[k - 1], polygon.vertices[k] };
+        triangles.push_back(triangle);
+      }
+    }
+  }
+
+          // Construct the open3d::TriangleMesh
+  const open3d::geometry::TriangleMesh open3d_mesh(vertices, triangles);
+
+  return open3d_mesh;
+}
+
+pcl::PolygonMesh open3dTriangleMeshToPCLMesh(const open3d::geometry::TriangleMesh& mesh)
+{
+  pcl::PolygonMesh pcl_mesh;
+
+          // Convert open3d::geometry::Pointcloud to pcl::PCLPointCloud2.
+  auto open3d_cloud = std::make_shared<open3d::geometry::PointCloud>();
+  open3d_cloud->points_ = mesh.vertices_;
+  if (mesh.HasVertexNormals())
+  {
+    open3d_cloud->normals_ = mesh.vertex_normals_;
+  }
+  const pcl::PointCloud<pcl::PointNormal> pcl_cloud = toPCL<pcl::PointNormal>(*open3d_cloud);
+  pcl::PCLPointCloud2 pcl_cloud_2;
+  pcl::toPCLPointCloud2(pcl_cloud, pcl_cloud_2);
+
+          // Set the pcl::PolygonMesh cloud
+  pcl_mesh.cloud = pcl_cloud_2;
+
+  pcl_mesh.polygons.reserve(mesh.triangles_.size());
+
+          // Set the pcl::PolygonMesh polygons
+  for (const auto& triangle : mesh.triangles_)
+  {
+    pcl::Vertices pcl_indices;
+    pcl_indices.vertices.emplace_back(triangle[0]);
+    pcl_indices.vertices.emplace_back(triangle[1]);
+    pcl_indices.vertices.emplace_back(triangle[2]);
+    pcl_mesh.polygons.emplace_back(pcl_indices);
+  }
+
+  return pcl_mesh;
+}
+
 }  // namespace noether

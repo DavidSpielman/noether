@@ -37,6 +37,7 @@ find_package(
              RenderingAnnotation
              RenderingOpenGL2
 )
+find_package(Open3D CONFIG REQUIRED)
 
 option(NOETHER_ENABLE_CLANG_TIDY "Enables compilation with clang-tidy" OFF)
 option(NOETHER_ENABLE_TESTING "Enables compilation with unit tests" OFF)
@@ -54,6 +55,7 @@ add_library(
   # Core
   src/core/tool_path_planner_pipeline.cpp
   src/utils.cpp
+  src/open3d_pcl_conversions.cpp
   src/plugin_interface.cpp
   # Mesh Modifiers
   src/mesh_modifiers/subset_extraction/subset_extractor.cpp
@@ -98,6 +100,7 @@ add_library(
   src/tool_path_planners/raster/origin_generators/offset_origin_generator.cpp
   src/tool_path_planners/raster/origin_generators/fixed_origin_generator.cpp
   src/tool_path_planners/raster/direction_generators/fixed_direction_generator.cpp
+  src/tool_path_planners/raster/direction_generators/min_oobb_direction_generator.cpp
   src/tool_path_planners/raster/direction_generators/principal_axis_direction_generator.cpp
   src/tool_path_planners/raster/direction_generators/pca_rotated_direction_generator.cpp
   src/tool_path_planners/raster/plane_slicer_raster_planner.cpp
@@ -140,6 +143,7 @@ target_link_libraries(
          ${VTK_LIBRARIES}
          yaml-cpp
          boost_plugin_loader::boost_plugin_loader
+         Open3D::Open3D
 )
 target_cxx_version(
   ${PROJECT_NAME}
@@ -186,6 +190,7 @@ configure_package(
     "PCL REQUIRED COMPONENTS common io surface segmentation"
     "VTK 9 REQUIRED COMPONENTS CommonCore CommonDataModel CommonTransforms CommonColor CommonMath CommonComputationalGeometry IOGeometry IOPLY FiltersCore FiltersGeneral RenderingCore RenderingAnnotation RenderingOpenGL2"
     boost_plugin_loader
+    "Open3D CONFIG"
   TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_plugins mesh_primitive_generator
 )
 

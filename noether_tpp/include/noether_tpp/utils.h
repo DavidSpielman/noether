@@ -1,5 +1,8 @@
 #include <noether_tpp/core/tool_path_modifier.h>
+#include <noether_tpp/open3d_pcl_conversions.h>
 
+#include <open3d/geometry/BoundingVolume.h>
+#include <open3d/geometry/TriangleMesh.h>
 #include <pcl/PCLPointField.h>
 #include <pcl/geometry/mesh_traits.h>
 #include <pcl/geometry/triangle_mesh.h>
@@ -142,5 +145,19 @@ createCylinderMeshWithUniformTriangles(const float radius,
                                        const float theta_range = static_cast<float>(2.0 * M_PI),
                                        const bool include_caps = true,
                                        const Eigen::Isometry3d& origin = Eigen::Isometry3d::Identity());
+
+/**
+ * @brief Converts a pcl::PolygonMesh to a open3d::geometry::TriangleMesh
+ * @param mesh The pcl::PolygonMesh to convert
+ * @return The converted open3d::geometry::TriangleMesh
+ */
+open3d::geometry::TriangleMesh pclMeshToOpen3dTriangleMesh(const pcl::PolygonMesh& mesh);
+
+/**
+ * @brief Converts an open3d::geometry::TriangleMesh to a pcl::PolygonMesh
+ * @param mesh The open3d::geometry::TriangleMesh to convert
+ * @return The converted pcl::PolygonMesh
+ */
+pcl::PolygonMesh open3dTriangleMeshToPCLMesh(const open3d::geometry::TriangleMesh& mesh);
 
 }  // namespace noether
