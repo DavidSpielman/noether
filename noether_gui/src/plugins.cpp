@@ -5,6 +5,7 @@
 #include <noether_gui/plugin_interface.h>
 // Direction Generators
 #include <noether_gui/widgets/tool_path_planners/raster/direction_generators/fixed_direction_generator_widget.h>
+#include <noether_gui/widgets/tool_path_planners/raster/direction_generators/min_oobb_direction_generator_widget.h>
 #include <noether_gui/widgets/tool_path_planners/raster/direction_generators/principal_axis_direction_generator_widget.h>
 // Origin Generators
 #include <noether_gui/widgets/tool_path_planners/raster/origin_generators/fixed_origin_generator_widget.h>
@@ -61,6 +62,7 @@ EXPORT_SIMPLE_MESH_MODIFIER_WIDGET_PLUGIN(RansacPlaneProjectionMeshModifierWidge
 
 // Direction Generators
 EXPORT_SIMPLE_DIRECTION_GENERATOR_WIDGET_PLUGIN(FixedDirectionGeneratorWidget, FixedDirection)
+EXPORT_SIMPLE_DIRECTION_GENERATOR_WIDGET_PLUGIN(MinOOBBDirectionGeneratorWidget, MinimumOOBB)
 EXPORT_SIMPLE_DIRECTION_GENERATOR_WIDGET_PLUGIN(PrincipalAxisDirectionGeneratorWidget, PrincipalAxis)
 
 // Origin Generators

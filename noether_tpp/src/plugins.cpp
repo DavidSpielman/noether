@@ -15,6 +15,7 @@
 
 // Direction Generators
 #include <noether_tpp/tool_path_planners/raster/direction_generators/fixed_direction_generator.h>
+#include <noether_tpp/tool_path_planners/raster/direction_generators/min_oobb_direction_generator.h>
 #include <noether_tpp/tool_path_planners/raster/direction_generators/pca_rotated_direction_generator.h>
 #include <noether_tpp/tool_path_planners/raster/direction_generators/principal_axis_direction_generator.h>
 
@@ -84,6 +85,7 @@ EXPORT_MESH_MODIFIER_PLUGIN(Plugin_CompoundMeshModifier, CompoundMeshModifier)
 // Direction Generators
 EXPORT_SIMPLE_DIRECTION_GENERATOR_PLUGIN(FixedDirectionGenerator, FixedDirection)
 EXPORT_SIMPLE_DIRECTION_GENERATOR_PLUGIN(PrincipalAxisDirectionGenerator, PrincipalAxis)
+EXPORT_SIMPLE_DIRECTION_GENERATOR_PLUGIN(MinimumOOBBDirectionGenerator, MinimumOOBB)
 
 struct Plugin_PCARotatedDirectionGenerator : public Plugin<DirectionGenerator>
 {

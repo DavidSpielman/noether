@@ -40,6 +40,7 @@ add_library(
   src/widgets/tool_path_planners/raster/raster_planner_widget.cpp
   # Direction Generator
   src/widgets/tool_path_planners/raster/direction_generators/fixed_direction_generator_widget.cpp
+  src/widgets/tool_path_planners/raster/direction_generators/min_oobb_direction_generator_widget.cpp
   src/widgets/tool_path_planners/raster/direction_generators/principal_axis_direction_generator_widget.cpp
   # Origin Generator
   src/widgets/tool_path_planners/raster/origin_generators/fixed_origin_generator_widget.cpp
