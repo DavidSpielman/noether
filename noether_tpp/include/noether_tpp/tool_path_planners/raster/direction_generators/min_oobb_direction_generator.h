@@ -14,15 +14,10 @@ namespace noether
 class MinimumOOBBDirectionGenerator : public DirectionGenerator
 {
 public:
-  MinimumOOBBDirectionGenerator(double rotation_offset = 0.0);
+  MinimumOOBBDirectionGenerator() = default;
   Eigen::Vector3d generate(const pcl::PolygonMesh& mesh) const override final;
 
 protected:
-  /**
-   * @brief Rotation offset (radians) to apply about the smallest principal axis to the generated raster direction
-   */
-  double rotation_offset_;
-
   DECLARE_YAML_FRIEND_CLASSES(MinimumOOBBDirectionGenerator)
 };
 

@@ -2,25 +2,15 @@
 
 #include <noether_gui/widgets.h>
 
-class QFormLayout;
-class QLabel;
-
 namespace noether
 {
-class AngleDoubleSpinBox;
-
 class MinOOBBDirectionGeneratorWidget : public BaseWidget
 {
 public:
-  MinOOBBDirectionGeneratorWidget(QWidget* parent = nullptr);
+  using BaseWidget::BaseWidget;
+  using BaseWidget::configure;
 
-  void configure(const YAML::Node&) override;
   void save(YAML::Node&) const override;
-
-private:
-  QFormLayout* layout_;
-  QLabel* label_;
-  AngleDoubleSpinBox* rotation_offset_;
 };
 
 }  // namespace noether

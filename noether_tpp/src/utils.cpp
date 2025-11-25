@@ -698,10 +698,10 @@ open3d::geometry::TriangleMesh pclMeshToOpen3dTriangleMesh(const pcl::PolygonMes
   pcl::fromPCLPointCloud2(mesh.cloud, *pcl_cloud);
   const open3d::geometry::PointCloud open3d_cloud = toOpen3D<pcl::PointNormal>(*pcl_cloud);
 
-          // Set the vertices of the open3d cloud
+  // Set the vertices of the open3d cloud
   const std::vector<Eigen::Vector3d> vertices = open3d_cloud.points_;
 
-          // Set the triangles of the Open3d::TriangleMesh from the pcl::PolygonMesh
+  // Set the triangles of the Open3d::TriangleMesh from the pcl::PolygonMesh
   std::vector<Eigen::Vector3i> triangles;
   triangles.reserve(mesh.polygons.size());
 
@@ -723,7 +723,7 @@ open3d::geometry::TriangleMesh pclMeshToOpen3dTriangleMesh(const pcl::PolygonMes
     }
   }
 
-          // Construct the open3d::TriangleMesh
+  // Construct the open3d::TriangleMesh
   const open3d::geometry::TriangleMesh open3d_mesh(vertices, triangles);
 
   return open3d_mesh;
@@ -733,7 +733,7 @@ pcl::PolygonMesh open3dTriangleMeshToPCLMesh(const open3d::geometry::TriangleMes
 {
   pcl::PolygonMesh pcl_mesh;
 
-          // Convert open3d::geometry::Pointcloud to pcl::PCLPointCloud2.
+  // Convert open3d::geometry::Pointcloud to pcl::PCLPointCloud2.
   auto open3d_cloud = std::make_shared<open3d::geometry::PointCloud>();
   open3d_cloud->points_ = mesh.vertices_;
   if (mesh.HasVertexNormals())
@@ -744,12 +744,12 @@ pcl::PolygonMesh open3dTriangleMeshToPCLMesh(const open3d::geometry::TriangleMes
   pcl::PCLPointCloud2 pcl_cloud_2;
   pcl::toPCLPointCloud2(pcl_cloud, pcl_cloud_2);
 
-          // Set the pcl::PolygonMesh cloud
+  // Set the pcl::PolygonMesh cloud
   pcl_mesh.cloud = pcl_cloud_2;
 
   pcl_mesh.polygons.reserve(mesh.triangles_.size());
 
-          // Set the pcl::PolygonMesh polygons
+  // Set the pcl::PolygonMesh polygons
   for (const auto& triangle : mesh.triangles_)
   {
     pcl::Vertices pcl_indices;

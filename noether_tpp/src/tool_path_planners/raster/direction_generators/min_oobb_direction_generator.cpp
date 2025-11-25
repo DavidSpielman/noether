@@ -11,10 +11,6 @@
 
 namespace noether
 {
-MinimumOOBBDirectionGenerator::MinimumOOBBDirectionGenerator(double rotation_offset)
-  : rotation_offset_(rotation_offset)
-{
-}
 
 Eigen::Vector3d MinimumOOBBDirectionGenerator::generate(const pcl::PolygonMesh& mesh) const
 {
@@ -30,15 +26,12 @@ namespace YAML
 /** @cond */
 Node convert<noether::MinimumOOBBDirectionGenerator>::encode(const noether::MinimumOOBBDirectionGenerator& val)
 {
-  Node node;
-  node["rotation_offset"] = val.rotation_offset_;
-  return node;
+  return {};
 }
 
 bool convert<noether::MinimumOOBBDirectionGenerator>::decode(const Node& node,
-                                                               noether::MinimumOOBBDirectionGenerator& val)
+                                                             noether::MinimumOOBBDirectionGenerator& val)
 {
-  val.rotation_offset_ = getMember<double>(node, "rotation_offset");
   return true;
 }
 /** @endcond */
